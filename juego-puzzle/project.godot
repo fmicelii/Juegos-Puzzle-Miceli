@@ -11,8 +11,26 @@ config_version=5
 [application]
 
 config/name="Juego-Puzzle"
+run/main_scene="uid://bcrttrbefbqq"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+
+[layer_names]
+
+2d_render/layer_1="solidos"
+2d_render/layer_2="danio"
+2d_render/layer_3="jugador"
+2d_render/layer_4="colectables"
+2d_physics/layer_1="solidos"
+2d_physics/layer_2="danio"
+2d_physics/layer_3="jugador"
+2d_physics/layer_4="recolectables"
 
 [physics]
 
@@ -20,4 +38,8 @@ config/icon="res://icon.svg"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.021434633, 0.021434637, 0.021434618, 1)
