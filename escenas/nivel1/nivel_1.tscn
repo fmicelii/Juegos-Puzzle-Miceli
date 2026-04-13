@@ -17,4 +17,5 @@ tile_set = ExtResource("2_xn014")
 [node name="bordes" parent="." unique_id=1871860939 instance=ExtResource("1_rf15n")]
 
 [node name="mago" parent="." unique_id=1595822948 instance=ExtResource("3_qixul")]
-position = Vector2(186, -90)
+position = Vector2(180, -94)
+collision_layer = 4
