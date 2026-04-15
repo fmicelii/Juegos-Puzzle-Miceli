@@ -7,9 +7,12 @@ extends CharacterBody2D
 var _velocidadSalto: float = -250
 var _velocidad: float = 100.0 #arranca con _ porque es una variable privada
 var _muerto : bool #por defecto false
+signal muertePersonaje
 
 func _ready() -> void: #conectamos por codigo para mas prolijidad y buen habito
-		area2d.body_entered.connect(_on_area_2d_body_entered)
+	add_to_group("personajes")
+	area2d.body_entered.connect(_on_area_2d_body_entered)
+
 
 func _physics_process(delta: float) -> void:
 	if _muerto:
@@ -45,3 +48,4 @@ func _on_area_2d_body_entered(_body: Node2D) -> void:
 	animacion.material = efectoRojoPersonaje
 	_muerto = true
 	animacion.stop()
+	muertePersonaje.emit()
