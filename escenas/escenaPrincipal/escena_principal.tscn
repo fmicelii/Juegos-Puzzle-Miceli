@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://bcrttrbefbqq"]
 
-[ext_resource type="PackedScene" uid="uid://e2rpah8flkqk" path="res://escenas/nivel1/nivel_1.tscn" id="1_o80ot"]
+[ext_resource type="Script" uid="uid://2jurf2bhhg5l" path="res://escenas/escenaPrincipal/escena_principal.gd" id="1_o80ot"]
 
 [node name="escenaPrincipal" type="Node2D" unique_id=1953355200]
-
-[node name="nivel1" parent="." unique_id=885155254 instance=ExtResource("1_o80ot")]
-position = Vector2(0, -8)
+script = ExtResource("1_o80ot")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1314181274]
 zoom = Vector2(2.31, 2.31)

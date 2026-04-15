@@ -1,10 +1,20 @@
 extends CharacterBody2D
 
 @export var animacion: AnimatedSprite2D
+@export var area2d: Area2D
+@export var efectoRojoPersonaje: ShaderMaterial
+
 var _velocidadSalto: float = -250
 var _velocidad: float = 100.0 #arranca con _ porque es una variable privada
+var _muerto : bool #por defecto false
+
+func _ready() -> void: #conectamos por codigo para mas prolijidad y buen habito
+		area2d.body_entered.connect(_on_area_2d_body_entered)
 
 func _physics_process(delta: float) -> void:
+	if _muerto:
+		return
+	
 	#gravedad 
 	velocity += get_gravity() *delta #get_gravity nos devuelve un vector2(x,y). getgravity le suma la gravedad en y a velocity 
 	
@@ -29,3 +39,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = 0
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(_body: Node2D) -> void:
+	animacion.material = efectoRojoPersonaje
+	_muerto = true
+	animacion.stop()
