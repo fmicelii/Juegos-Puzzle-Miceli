@@ -5,8 +5,6 @@ extends Node2D
 var _nivelActual: int = 1
 var _nivelActualInstancia: Node
 
-
-
 func _ready() -> void:
 	_crearNivel(_nivelActual)
 
@@ -19,7 +17,7 @@ func _crearNivel(numeroNivel :int):
 	var hijos := _nivelActualInstancia.get_children() #agarra todos los hijos personajes
 	for i in hijos.size():
 		if hijos[i].is_in_group("personajes"):
-			hijos[i].muertePersonaje.connect(_reiniciarNivel())
+			hijos[i].muertePersonaje.connect(_reiniciarNivel)
 			break
 			
 
@@ -29,4 +27,4 @@ func _eliminarNivel():
 
 func _reiniciarNivel():
 	_eliminarNivel()
-	_crearNivel(_nivelActual)
+	_crearNivel.call_deferred(_nivelActual) #Calls the method in deferred mode, at the end of the current frame
