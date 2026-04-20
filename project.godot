@@ -15,6 +15,10 @@ run/main_scene="uid://bcrttrbefbqq"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[debug]
+
+shapes/collision/shape_color=Color(0, 0.6392157, 0.34901962, 0.34901962)
+
 [display]
 
 window/size/window_width_override=1280
