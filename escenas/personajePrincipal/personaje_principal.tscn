@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bdblyb603303r"]
 
-[ext_resource type="Script" uid="uid://ck1ot8wrec55b" path="res://escenas/personajePrincipal/personajePrincipal.gd" id="1_iwou3"]
+[ext_resource type="Script" uid="uid://ck1ot8wrec55b" path="res://escenas/personajePrincipal/personaje_principal.gd" id="1_iwou3"]
 [ext_resource type="SpriteFrames" uid="uid://maunus653wdc" path="res://escenas/personajePrincipal/PersonajePrincipalSpriteFrames.tres" id="2_1gkdh"]
 [ext_resource type="Material" uid="uid://cf46qdrpnkwd8" path="res://escenas/personajePrincipal/materialPersonajeRojo.tres" id="2_qerjr"]
 
@@ -23,8 +23,8 @@ shape = SubResource("RectangleShape2D_lvt4w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=958099926]
 sprite_frames = ExtResource("2_1gkdh")
-animation = &"idle"
-frame_progress = 0.1653261
+animation = &"correr"
+frame_progress = 0.70567405
 
 [node name="Area2D_Danio" type="Area2D" parent="." unique_id=991343733]
 collision_layer = 4

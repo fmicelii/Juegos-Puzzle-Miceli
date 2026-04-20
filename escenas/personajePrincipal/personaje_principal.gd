@@ -9,10 +9,10 @@ var _velocidad: float = 100.0 #arranca con _ porque es una variable privada
 var _muerto : bool #por defecto false
 signal muertePersonaje
 
-func _ready() -> void: #conectamos por codigo para mas prolijidad y buen habito
+func _ready() -> void: 
 	add_to_group("personajes")
+	#conectamos por codigo para mas prolijidad y pq es buen habito
 	area2d.body_entered.connect(_on_area_2d_body_entered)
-
 
 func _physics_process(delta: float) -> void:
 	if _muerto:

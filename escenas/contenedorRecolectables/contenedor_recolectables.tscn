@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b80p78v4tmo6w"]
+
+[ext_resource type="Script" uid="uid://os8lrhwmesrr" path="res://escenas/contenedorRecolectables/contenedor_recolectables.gd" id="1_hjftw"]
+
+[node name="contenedorRecolectables" type="Node" unique_id=1288952054]
+script = ExtResource("1_hjftw")

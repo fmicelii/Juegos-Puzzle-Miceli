@@ -54,7 +54,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"correr",
-"speed": 10.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -73,5 +73,5 @@ animations = [{
 }],
 "loop": true,
 "name": &"saltar",
-"speed": 5.0
+"speed": 10.0
 }]
