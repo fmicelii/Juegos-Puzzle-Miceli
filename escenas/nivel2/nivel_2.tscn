@@ -20,7 +20,7 @@ tile_set = ExtResource("1_gdxtu")
 [node name="bordes" parent="." unique_id=1871860939 instance=ExtResource("2_krfvu")]
 
 [node name="mago" parent="." unique_id=1595822948 instance=ExtResource("3_kvysu")]
-position = Vector2(-180, -22)
+position = Vector2(-191, -17)
 
 [node name="trampa" parent="." unique_id=1554190435 instance=ExtResource("4_1a7ms")]
 position = Vector2(88, -103.96)
@@ -28,10 +28,10 @@ position = Vector2(88, -103.96)
 [node name="contenedorRecolectables" parent="." unique_id=1288952054 instance=ExtResource("5_t7eco")]
 
 [node name="recolectable" parent="contenedorRecolectables" unique_id=105441413 instance=ExtResource("6_kwjv5")]
-position = Vector2(46, -100)
+position = Vector2(-137, -8)
 
 [node name="recolectable2" parent="contenedorRecolectables" unique_id=80711429 instance=ExtResource("6_kwjv5")]
-position = Vector2(133, -32)
+position = Vector2(-102, 5)
 
 [node name="recolectable3" parent="contenedorRecolectables" unique_id=1868213196 instance=ExtResource("6_kwjv5")]
-position = Vector2(199, 67)
+position = Vector2(-118, -16)
