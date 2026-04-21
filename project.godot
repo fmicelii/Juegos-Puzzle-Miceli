@@ -22,6 +22,7 @@ buses/default_bus_layout="uid://bl2ckto4oty1f"
 [autoload]
 
 SonidosGlobales="*uid://bfhnf8idkr24x"
+ControladorGlobal="*uid://ba1ddju43m1wt"
 
 [debug]
 

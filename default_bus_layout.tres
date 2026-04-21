@@ -16,5 +16,5 @@ bus/2/name = &"MUSIC"
 bus/2/solo = false
 bus/2/mute = false
 bus/2/bypass_fx = false
-bus/2/volume_db = -3.8989918
+bus/2/volume_db = -1.2592735
 bus/2/send = &"Master"

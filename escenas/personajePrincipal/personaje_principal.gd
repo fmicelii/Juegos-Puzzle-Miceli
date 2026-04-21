@@ -51,3 +51,4 @@ func _on_area_2d_body_entered(_body: Node2D) -> void:
 	animacion.stop()
 	await get_tree().create_timer(1).timeout
 	muertePersonaje.emit()
+	ControladorGlobal.sumar_muerte()
