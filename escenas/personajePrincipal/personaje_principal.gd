@@ -45,6 +45,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
+	SonidosGlobales.reproducirSonidoMuerte()
 	animacion.material = efectoRojoPersonaje
 	_muerto = true
 	animacion.stop()

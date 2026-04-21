@@ -15,6 +15,14 @@ run/main_scene="uid://bcrttrbefbqq"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://bl2ckto4oty1f"
+
+[autoload]
+
+SonidosGlobales="*uid://bfhnf8idkr24x"
+
 [debug]
 
 shapes/collision/shape_color=Color(0, 0.6392157, 0.34901962, 0.34901962)
