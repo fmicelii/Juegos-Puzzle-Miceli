@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 	velocity += get_gravity() *delta #get_gravity nos devuelve un vector2(x,y). getgravity le suma la gravedad en y a velocity 
 	
 	if !is_on_floor():
-		animacion.play("saltar")
+		animacion.play("salto")
 	elif velocity.x != 0:
 		animacion.play("correr")
 	else:

@@ -9,11 +9,13 @@ func _ready() -> void:
 	reproductorSonidoRecolectable = AudioStreamPlayer.new()
 	add_child(reproductorSonidoRecolectable)
 	reproductorSonidoRecolectable.stream = preload("res://sonidos/sonido_recoleccion.wav")
+	reproductorSonidoRecolectable.set_bus("SFX")
 	
 	#muerte
 	reproductorSonidoMuerte = AudioStreamPlayer.new()
 	add_child(reproductorSonidoMuerte)
 	reproductorSonidoMuerte.stream = preload("res://sonidos/sonido_muerte.mp3") 
+	reproductorSonidoMuerte.set_bus("SFX")
 
 func reproducirSonidoRecolectable() -> void:
 	reproductorSonidoRecolectable.play()
