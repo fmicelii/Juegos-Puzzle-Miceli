@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cobsk04y1u0ku"]
+
+[ext_resource type="Script" uid="uid://cwbpgt1eja14k" path="res://escenas/pausa.gd" id="1_ety1p"]
+
+[node name="pausa" type="CanvasLayer" unique_id=667431483]
+process_mode = 3
+script = ExtResource("1_ety1p")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=796689372]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.4509804)

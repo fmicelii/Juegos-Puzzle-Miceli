@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cnksgmvbawbkm" path="res://escenas/escenaFinal/escena_final.tscn" id="4_kse0y"]
 [ext_resource type="AudioStream" uid="uid://csyoql15iygaw" path="res://musica/musica.wav" id="5_8fy1g"]
 [ext_resource type="PackedScene" uid="uid://dcmbevj7udt5g" path="res://escenas/contadorMuertes/contador_muertes.tscn" id="6_nga0w"]
+[ext_resource type="PackedScene" uid="uid://cobsk04y1u0ku" path="res://escenas/pausa.tscn" id="7_igi0h"]
 
 [node name="escenaPrincipal" type="Node2D" unique_id=1953355200]
 script = ExtResource("1_o80ot")
@@ -32,3 +33,5 @@ offset_right = 45.46
 offset_bottom = 23.06
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="pausa" parent="." unique_id=667431483 instance=ExtResource("7_igi0h")]
