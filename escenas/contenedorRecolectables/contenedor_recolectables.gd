@@ -4,7 +4,7 @@ class_name ContenedorRecolectables
 var _totalRecolectables: int
 var _recolectablesAgarrados:int
 
-signal nivelPasado
+var todosAgarrados: bool = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,11 +13,12 @@ func _ready() -> void:
 	var recolectables := get_children()
 	_totalRecolectables= recolectables.size()
 	
+	
 	for recolectable in recolectables:
 		recolectable.contenedorRecolectables=self
 
 func recolectableAgarrado():
 	_recolectablesAgarrados +=1
 	if _recolectablesAgarrados == _totalRecolectables:
-		print("nivel completado")
-		nivelPasado.emit()
+		print("todas las hamburguesas se agarraron!!")
+		todosAgarrados = true

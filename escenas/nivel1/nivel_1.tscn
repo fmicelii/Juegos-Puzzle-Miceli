@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://db7a0pfokn6ai" path="res://escenas/bordes/bordes.tscn" id="1_rf15n"]
 [ext_resource type="TileSet" uid="uid://m345gvg0rj2u" path="res://tileSets/mazmorra.tres" id="2_xn014"]
+[ext_resource type="PackedScene" uid="uid://cmp0f8bxc2awu" path="res://escenas/princesa/princesa.tscn" id="3_b202b"]
 [ext_resource type="PackedScene" uid="uid://bdblyb603303r" path="res://escenas/personajePrincipal/personaje_principal.tscn" id="3_qixul"]
 [ext_resource type="PackedScene" uid="uid://c88pmt6mbe22k" path="res://escenas/trampa/trampa.tscn" id="4_g1lnx"]
 [ext_resource type="PackedScene" uid="uid://b80p78v4tmo6w" path="res://escenas/contenedorRecolectables/contenedor_recolectables.tscn" id="5_6o6mw"]
@@ -19,8 +20,11 @@ tile_set = ExtResource("2_xn014")
 
 [node name="bordes" parent="." unique_id=1871860939 instance=ExtResource("1_rf15n")]
 
-[node name="mago" parent="." unique_id=1595822948 instance=ExtResource("3_qixul")]
-position = Vector2(165, -94)
+[node name="RigidBody2D" parent="." unique_id=2128923955 instance=ExtResource("3_b202b")]
+position = Vector2(107, -66)
+
+[node name="pj" parent="." unique_id=1595822948 instance=ExtResource("3_qixul")]
+position = Vector2(153, -89)
 
 [node name="trampa" parent="." unique_id=1554190435 instance=ExtResource("4_g1lnx")]
 position = Vector2(40, -40)
@@ -28,7 +32,7 @@ position = Vector2(40, -40)
 [node name="contenedorRecolectables" parent="." unique_id=1288952054 instance=ExtResource("5_6o6mw")]
 
 [node name="recolectable" parent="contenedorRecolectables" unique_id=105441413 instance=ExtResource("5_nio2x")]
-position = Vector2(89, -66)
+position = Vector2(99, 1)
 
 [node name="recolectable2" parent="contenedorRecolectables" unique_id=794567285 instance=ExtResource("5_nio2x")]
 position = Vector2(39, 5)

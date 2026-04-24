@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0
 	move_and_slide()
 
-
+#manera alternativa de llamar a la señal, esta es por codigo
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	SonidosGlobales.reproducirSonidoMuerte()
 	animacion.material = efectoRojoPersonaje

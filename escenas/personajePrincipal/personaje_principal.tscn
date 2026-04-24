@@ -13,9 +13,9 @@ size = Vector2(14, 15)
 [node name="personajePrincipal" type="CharacterBody2D" unique_id=1595822948 node_paths=PackedStringArray("animacion", "area2d")]
 collision_layer = 4
 script = ExtResource("1_iwou3")
-efectoRojoPersonaje = ExtResource("2_qerjr")
 animacion = NodePath("AnimatedSprite2D")
 area2d = NodePath("Area2D_Danio")
+efectoRojoPersonaje = ExtResource("2_qerjr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2090576681]
 position = Vector2(0, -0.5)
@@ -23,7 +23,7 @@ shape = SubResource("RectangleShape2D_lvt4w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=958099926]
 sprite_frames = ExtResource("2_1gkdh")
-animation = &"idle"
+animation = &"correr"
 
 [node name="Area2D_Danio" type="Area2D" parent="." unique_id=991343733]
 collision_layer = 4

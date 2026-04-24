@@ -4,7 +4,6 @@ extends Node2D
 
 var _nivelActual: int = 1
 var _nivelActualInstancia: Node
-var contenedorRec: ContenedorRecolectables
 
 func _ready() -> void:
 	_crearNivel(_nivelActual)
@@ -18,7 +17,7 @@ func _crearNivel(numeroNivel :int):
 		if hijo.is_in_group("personajes"):
 			hijo.muertePersonaje.connect(_reiniciarNivel)
 		# vamos a un IF independiente para que revise todos los nodos
-		if hijo.is_in_group("contenedorRecolectables"):
+		if hijo.is_in_group("princesa"):
 			hijo.nivelPasado.connect(pasarNivel)
 
 func _eliminarNivel():

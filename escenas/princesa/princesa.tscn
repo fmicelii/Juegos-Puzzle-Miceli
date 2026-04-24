@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cmp0f8bxc2awu"]
+
+[ext_resource type="Script" uid="uid://65ft3ji0kimm" path="res://escenas/princesa/princesa.gd" id="1_jg1fk"]
+[ext_resource type="Texture2D" uid="uid://bip261o6k3gvx" path="res://sprites/princesa_spritesheet.png" id="1_vwqhc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jg1fk"]
+atlas = ExtResource("1_vwqhc")
+region = Rect2(0, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eig6u"]
+atlas = ExtResource("1_vwqhc")
+region = Rect2(16, 0, 16, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n6nn4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jg1fk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eig6u")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1m25"]
+size = Vector2(2, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eig6u"]
+size = Vector2(13, 8.5)
+
+[node name="princesa" type="RigidBody2D" unique_id=2128923955 node_paths=PackedStringArray("animacion")]
+script = ExtResource("1_jg1fk")
+animacion = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=183407921]
+sprite_frames = SubResource("SpriteFrames_n6nn4")
+animation = &"idle"
+frame_progress = 0.1699879
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1470549583]
+shape = SubResource("RectangleShape2D_y1m25")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1645593676]
+collision_layer = 16
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1929453904]
+shape = SubResource("RectangleShape2D_eig6u")
+debug_color = Color(0, 0.62841845, 0.6668909, 0.34901962)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
