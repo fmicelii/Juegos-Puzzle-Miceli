@@ -31,7 +31,7 @@ position = Vector2(88, -103.96)
 position = Vector2(-137, -8)
 
 [node name="recolectable2" parent="contenedorRecolectables" unique_id=80711429 instance=ExtResource("6_kwjv5")]
-position = Vector2(-102, 5)
+position = Vector2(-26, -15)
 
 [node name="recolectable3" parent="contenedorRecolectables" unique_id=1868213196 instance=ExtResource("6_kwjv5")]
-position = Vector2(-118, -16)
+position = Vector2(-102, 8)

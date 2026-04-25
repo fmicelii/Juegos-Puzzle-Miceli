@@ -10,7 +10,7 @@ var _muerto : bool #por defecto false
 signal muertePersonaje
 
 func _ready() -> void: 
-	add_to_group("personajes")
+	add_to_group("personaje")
 	#conectamos por codigo para mas prolijidad y pq es buen habito
 	area2d.body_entered.connect(_on_area_2d_body_entered)
 

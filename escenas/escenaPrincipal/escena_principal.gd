@@ -9,16 +9,18 @@ func _ready() -> void:
 	_crearNivel(_nivelActual)
 
 func _crearNivel(numeroNivel :int):
-	_nivelActualInstancia =niveles[numeroNivel-1].instantiate()
-	add_child(_nivelActualInstancia)
-			#:= es para decir que la variable sea del tipo del que le estamos metiendo
-	var hijos := _nivelActualInstancia.get_children() #agarra todos los hijos personajes
-	for hijo in hijos:
-		if hijo.is_in_group("personajes"):
-			hijo.muertePersonaje.connect(_reiniciarNivel)
-		# vamos a un IF independiente para que revise todos los nodos
-		if hijo.is_in_group("princesa"):
-			hijo.nivelPasado.connect(pasarNivel)
+	_nivelActualInstancia = niveles[numeroNivel-1].instantiate()
+	add_child(_nivelActualInstancia) # Al añadirlo, se ejecutan los _ready de los hijos
+	
+	
+	var personaje = get_tree().get_first_node_in_group("personaje")
+	if personaje:
+		personaje.muertePersonaje.connect(_reiniciarNivel)
+
+	var princesa = get_tree().get_first_node_in_group("princesa")
+	if princesa:
+		princesa.nivelPasado.connect(pasarNivel)
+		
 
 func _eliminarNivel():
 	_nivelActualInstancia.queue_free() #queue_free es para eliminar nodo y todos los hijos 
