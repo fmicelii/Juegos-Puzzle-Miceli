@@ -12,8 +12,15 @@ func _crearNivel(numeroNivel :int):
 	_nivelActualInstancia = niveles[numeroNivel-1].instantiate()
 	add_child(_nivelActualInstancia) # Al añadirlo, se ejecutan los _ready de los hijos
 	
+	#esto es para esperar 1 fotograma a que el niel viejo se borre
+	await get_tree().process_frame
+	#sino al hacer la logica que esta debajo, godot no sabe si agarrar
+	#al personaje del nivel anterior o al que se creó recien, entonces
+	#esperamos 1 fotograma para que se elimine el anterior y 
+	#solo haya q agarrar el recien creado :) 
+	
 	var personaje = get_tree().get_first_node_in_group("personaje")
-	if personaje:
+	if personaje: #si personaje existe hacer esto...
 		personaje.muertePersonaje.connect(_reiniciarNivel)
 
 	var princesa = get_tree().get_first_node_in_group("princesa")

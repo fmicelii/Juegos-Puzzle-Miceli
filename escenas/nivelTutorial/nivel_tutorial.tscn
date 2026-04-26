@@ -1,0 +1,40 @@
+[gd_scene format=4 uid="uid://cixrlu8oncla4"]
+
+[ext_resource type="TileSet" uid="uid://m345gvg0rj2u" path="res://tileSets/mazmorra.tres" id="1_l0qja"]
+[ext_resource type="PackedScene" uid="uid://bdblyb603303r" path="res://escenas/personajePrincipal/personaje_principal.tscn" id="3_li0xe"]
+[ext_resource type="PackedScene" uid="uid://cmp0f8bxc2awu" path="res://escenas/princesa/princesa.tscn" id="4_gtc5r"]
+[ext_resource type="PackedScene" uid="uid://b80p78v4tmo6w" path="res://escenas/contenedorRecolectables/contenedor_recolectables.tscn" id="6_xu4mr"]
+[ext_resource type="PackedScene" uid="uid://bf2v0gu1yb1hv" path="res://escenas/recolectable/recolectable.tscn" id="7_wb1rk"]
+
+[node name="nivelTutorial" type="Node2D" unique_id=885155254]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=482419175]
+zoom = Vector2(5.145, 5.145)
+
+[node name="fondo" type="TileMapLayer" parent="." unique_id=1237153964]
+tile_set = ExtResource("1_l0qja")
+
+[node name="nivel" type="TileMapLayer" parent="." unique_id=1930505807]
+tile_map_data = PackedByteArray("AAAJAAcAAAADAAIAAAAIAAcAAAADAAIAAAAKAAcAAAADAAIAAAALAAcAAAADAAIAAAAMAAcAAAADAAIAAAA=")
+tile_set = ExtResource("1_l0qja")
+
+[node name="bordes" type="TileMapLayer" parent="." unique_id=1022671499]
+tile_map_data = PackedByteArray("AAAGAAIAAAAAAAAAAAD5/wIAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wAAAAAAAAAAAAD5////AAAAAAAAAAD5//7/AAAAAAAAAAD5//3/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAD5/wMAAAAAAAAAAAD6/wMAAAAAAAAAAAD7/wMAAAAAAAAAAAD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD+/wMAAAAAAAAAAAD//wMAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAPz/AAAAAAAAAAAFAPz/AAAAAAAAAAAEAPz/AAAAAAAAAAADAPz/AAAAAAAAAAACAPz/AAAAAAAAAAABAPz/AAAAAAAAAAAAAPz/AAAAAAAAAAD///z/AAAAAAAAAAD+//z/AAAAAAAAAAD9//z/AAAAAAAAAAD8//z/AAAAAAAAAAD7//z/AAAAAAAAAAD6//z/AAAAAAAAAAD5//z/AAAAAAAAAAA=")
+tile_set = ExtResource("1_l0qja")
+
+[node name="pj" parent="." unique_id=1595822948 instance=ExtResource("3_li0xe")]
+position = Vector2(-83, 37)
+
+[node name="princesa" parent="." unique_id=2128923955 instance=ExtResource("4_gtc5r")]
+position = Vector2(83, 37)
+
+[node name="contenedorRecolectables" parent="." unique_id=1288952054 instance=ExtResource("6_xu4mr")]
+
+[node name="recolectable" parent="contenedorRecolectables" unique_id=105441413 instance=ExtResource("7_wb1rk")]
+position = Vector2(-42, 33)
+
+[node name="recolectable2" parent="contenedorRecolectables" unique_id=794567285 instance=ExtResource("7_wb1rk")]
+position = Vector2(40, 33)
+
+[node name="recolectable3" parent="contenedorRecolectables" unique_id=1300037290 instance=ExtResource("7_wb1rk")]
+position = Vector2(0, 33)
