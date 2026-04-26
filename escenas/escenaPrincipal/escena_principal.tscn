@@ -12,12 +12,6 @@
 script = ExtResource("1_o80ot")
 niveles = Array[PackedScene]([ExtResource("2_gt6uk"), ExtResource("3_aangj"), ExtResource("4_kse0y")])
 
-[node name="nivel1" parent="." unique_id=885155254 instance=ExtResource("2_gt6uk")]
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1314181274]
-position = Vector2(0, 8.18)
-zoom = Vector2(2.315, 2.315)
-
 [node name="musicaFondo" type="AudioStreamPlayer" parent="." unique_id=295334740]
 stream = ExtResource("5_8fy1g")
 autoplay = true
