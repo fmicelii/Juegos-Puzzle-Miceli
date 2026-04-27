@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://bcrttrbefbqq"]
 
 [ext_resource type="Script" uid="uid://2jurf2bhhg5l" path="res://escenas/escenaPrincipal/escena_principal.gd" id="1_o80ot"]
+[ext_resource type="PackedScene" uid="uid://dk6p20qqpim0q" path="res://escenas/niveles/tutoriales/nivel_tutorial_3.tscn" id="2_4pr7v"]
 [ext_resource type="PackedScene" uid="uid://coy41l2p3320j" path="res://escenas/niveles/tutoriales/nivel_tutorial_1.tscn" id="2_igi0h"]
 [ext_resource type="PackedScene" uid="uid://d3m3t6tgd56y" path="res://escenas/niveles/tutoriales/nivel_tutorial_2.tscn" id="3_igi0h"]
+[ext_resource type="PackedScene" uid="uid://bt1sf20v4t6k3" path="res://escenas/niveles/nivel_2.tscn" id="4_7rqtr"]
 [ext_resource type="PackedScene" uid="uid://cnksgmvbawbkm" path="res://escenas/escenaFinal/escena_final.tscn" id="4_kse0y"]
 [ext_resource type="AudioStream" uid="uid://csyoql15iygaw" path="res://musica/musica.wav" id="5_8fy1g"]
 [ext_resource type="PackedScene" uid="uid://dcmbevj7udt5g" path="res://escenas/contadorMuertes/contador_muertes.tscn" id="6_nga0w"]
@@ -10,7 +12,7 @@
 
 [node name="escenaPrincipal" type="Node2D" unique_id=1953355200]
 script = ExtResource("1_o80ot")
-niveles = Array[PackedScene]([ExtResource("2_igi0h"), ExtResource("3_igi0h"), ExtResource("4_kse0y")])
+niveles = Array[PackedScene]([ExtResource("2_igi0h"), ExtResource("3_igi0h"), ExtResource("4_7rqtr"), ExtResource("2_4pr7v"), ExtResource("4_kse0y")])
 
 [node name="musicaFondo" type="AudioStreamPlayer" parent="." unique_id=295334740]
 stream = ExtResource("5_8fy1g")

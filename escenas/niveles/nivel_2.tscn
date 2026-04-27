@@ -1,0 +1,53 @@
+[gd_scene format=4 uid="uid://bt1sf20v4t6k3"]
+
+[ext_resource type="TileSet" uid="uid://m345gvg0rj2u" path="res://tileSets/mazmorra.tres" id="1_6c1so"]
+[ext_resource type="PackedScene" uid="uid://bdblyb603303r" path="res://escenas/personajePrincipal/personaje_principal.tscn" id="2_naewe"]
+[ext_resource type="PackedScene" uid="uid://q8unmdvb1bxs" path="res://escenas/botonPuerta/puerta.tscn" id="3_j8mmm"]
+[ext_resource type="PackedScene" uid="uid://bo4g5tnpsi7gn" path="res://escenas/botonPuerta/boton.tscn" id="4_7fdhb"]
+[ext_resource type="PackedScene" uid="uid://c88pmt6mbe22k" path="res://escenas/trampa/trampa.tscn" id="5_j8mmm"]
+[ext_resource type="PackedScene" uid="uid://cmp0f8bxc2awu" path="res://escenas/princesa/princesa.tscn" id="6_7fdhb"]
+[ext_resource type="PackedScene" uid="uid://b80p78v4tmo6w" path="res://escenas/contenedorRecolectables/contenedor_recolectables.tscn" id="7_wijgw"]
+[ext_resource type="PackedScene" uid="uid://bf2v0gu1yb1hv" path="res://escenas/recolectable/recolectable.tscn" id="8_mactt"]
+
+[node name="nivel2" type="Node2D" unique_id=1777806763]
+
+[node name="bordes" type="TileMapLayer" parent="." unique_id=434737768]
+tile_map_data = PackedByteArray("AAD1/wUAAAAAAAAAAAD2/wUAAAAAAAAAAAD3/wUAAAAAAAAAAAD4/wUAAAAAAAAAAAD5/wUAAAAAAAAAAAD6/wUAAAAAAAAAAAD7/wUAAAAAAAAAAAD8/wUAAAAAAAAAAAD9/wUAAAAAAAAAAAD+/wUAAAAAAAAAAAD//wUAAAAAAAAAAAAAAAUAAAAAAAAAAAABAAUAAAAAAAAAAAACAAUAAAAAAAAAAAADAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAHAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAUAAAAAAAAAAAAKAAUAAAAAAAAAAAD1//r/AAAAAAAAAAD1//v/AAAAAAAAAAD1//z/AAAAAAAAAAD1//3/AAAAAAAAAAD1//7/AAAAAAAAAAD1////AAAAAAAAAAD1/wAAAAAAAAAAAAD1/wEAAAAAAAAAAAD1/wIAAAAAAAAAAAD1/wMAAAAAAAAAAAD1/wQAAAAAAAAAAAAKAPr/AAAAAAAAAAAKAPv/AAAAAAAAAAAKAPz/AAAAAAAAAAAKAP3/AAAAAAAAAAAKAP7/AAAAAAAAAAAKAP//AAAAAAAAAAAKAAAAAAAAAAAAAAAKAAEAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAQAAAAAAAAAAAD2//r/AAAAAAAAAAD3//r/AAAAAAAAAAD4//r/AAAAAAAAAAD5//r/AAAAAAAAAAD6//r/AAAAAAAAAAD7//r/AAAAAAAAAAD8//r/AAAAAAAAAAD9//r/AAAAAAAAAAD+//r/AAAAAAAAAAD///r/AAAAAAAAAAAAAPr/AAAAAAAAAAABAPr/AAAAAAAAAAACAPr/AAAAAAAAAAADAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAAHAPr/AAAAAAAAAAAIAPr/AAAAAAAAAAAJAPr/AAAAAAAAAAA=")
+tile_set = ExtResource("1_6c1so")
+
+[node name="nivel" type="TileMapLayer" parent="." unique_id=19973722]
+tile_map_data = PackedByteArray("AAD/////AAAAAAAAAAAAAPz/AAAAAAAAAAAAAP//AAAAAAAAAAD2//z/AAACAAAAAAD3//z/AAACAAAAAAD4//z/AAACAAAAAAD+//z/AAAAAAAAAAD9//z/AAAAAAAAAAD8//z/AAAAAAAAAAD8//3/AAAAAAAAAAD8//7/AAAAAAAAAAD8////AAAAAAAAAAD+////AAAAAAAAAAABAP//AAAAAAAAAAABAP7/AAAAAAAAAAABAP3/AAAAAAAAAAABAPz/AAAAAAAAAAD5//z/AAACAAAAAAD6//z/AAACAAAAAAD7//z/AAACAAAAAAD7//7/AAAAAAAAAAD6//7/AAABAAAAAAD5//7/AAABAAAAAAD2/wAAAAABAAAAAAD3/wAAAAABAAAAAAD8/wIAAAAAAAAAAAD8/wMAAAAAAAAAAAD7/wEAAAABAAAAAAD+/wEAAAACAAAAAAD+/wMAAAAAAAAAAAAJAAMAAAACAAAAAAAIAAMAAAACAAAAAAAHAAMAAAACAAAAAAAGAAMAAAACAAAAAAAEAAEAAAABAAAAAAAFAAEAAAABAAAAAAACAP//AAAAAAAAAAADAP//AAABAAAAAAAJAP3/AAAAAAAAAAAIAP3/AAAAAAAAAAAHAP3/AAAAAAAAAAAHAP7/AAAAAAAAAAAIAP7/AAAAAAAAAAAJAP7/AAAAAAAAAAAGAAAAAAACAAAAAAD//wEAAAAAAAAAAAD//wIAAAAAAAAAAAD//wMAAAAAAAAAAAD8/wQAAAAAAAAAAAD7/wIAAAAAAAAAAAD7/wMAAAAAAAAAAAD7/wQAAAAAAAAAAAD6/wQAAAADAAEAAAD5/wQAAAADAAEAAAD4/wQAAAADAAEAAAD3/wQAAAADAAEAAAD2/wQAAAADAAEAAAD7////AAADAAAAAAD6/wEAAAABAAAAAAD6////AAADAAAAAAACAAQAAAADAAEAAAADAAQAAAADAAEAAAADAAAAAAADAAAAAAACAAAAAAADAAAAAAD9//3/AAAAAAAAAAD9//7/AAABAAAAAAD+//7/AAABAAAAAAD+//3/AAACAAAAAAA=")
+tile_set = ExtResource("1_6c1so")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=459526482]
+zoom = Vector2(3.36, 3.36)
+
+[node name="princesa" parent="." unique_id=2128923955 instance=ExtResource("6_7fdhb")]
+position = Vector2(8, -25)
+
+[node name="personajePrincipal" parent="." unique_id=1595822948 instance=ExtResource("2_naewe")]
+position = Vector2(-132, -71)
+
+[node name="StaticBody2D" parent="." unique_id=1567901230 instance=ExtResource("3_j8mmm")]
+position = Vector2(-8, -56)
+
+[node name="Area2D" parent="." unique_id=934579866 node_paths=PackedStringArray("puerta_asignada") instance=ExtResource("4_7fdhb")]
+position = Vector2(150, -56)
+puerta_asignada = NodePath("../StaticBody2D")
+
+[node name="trampa" parent="." unique_id=1554190435 instance=ExtResource("5_j8mmm")]
+position = Vector2(-40, -8)
+
+[node name="trampa2" parent="." unique_id=1176110160 instance=ExtResource("5_j8mmm")]
+position = Vector2(104, -88)
+
+[node name="contenedorRecolectables" parent="." unique_id=1288952054 instance=ExtResource("7_wijgw")]
+
+[node name="recolectable" parent="contenedorRecolectables" unique_id=105441413 instance=ExtResource("8_mactt")]
+position = Vector2(104, -58)
+
+[node name="recolectable2" parent="contenedorRecolectables" unique_id=1154367850 instance=ExtResource("8_mactt")]
+position = Vector2(-25, 36)
+
+[node name="recolectable3" parent="contenedorRecolectables" unique_id=983667096 instance=ExtResource("8_mactt")]
+position = Vector2(148, 37)
