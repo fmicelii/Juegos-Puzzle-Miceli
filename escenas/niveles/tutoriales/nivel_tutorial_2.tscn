@@ -1,0 +1,31 @@
+[gd_scene format=4 uid="uid://d3m3t6tgd56y"]
+
+[ext_resource type="TileSet" uid="uid://m345gvg0rj2u" path="res://tileSets/mazmorra.tres" id="1_w0q64"]
+[ext_resource type="PackedScene" uid="uid://bdblyb603303r" path="res://escenas/personajePrincipal/personaje_principal.tscn" id="2_ute0u"]
+[ext_resource type="PackedScene" uid="uid://cmp0f8bxc2awu" path="res://escenas/princesa/princesa.tscn" id="3_ldgge"]
+[ext_resource type="PackedScene" uid="uid://b80p78v4tmo6w" path="res://escenas/contenedorRecolectables/contenedor_recolectables.tscn" id="4_m2c6r"]
+[ext_resource type="PackedScene" uid="uid://bf2v0gu1yb1hv" path="res://escenas/recolectable/recolectable.tscn" id="5_ppe7a"]
+
+[node name="nivelTutorial2" type="Node2D" unique_id=202953730]
+
+[node name="bordes" type="TileMapLayer" parent="." unique_id=1344423413]
+tile_map_data = PackedByteArray("AAD3/wQAAAAAAAAAAAD4/wQAAAAAAAAAAAD5/wQAAAAAAAAAAAD6/wQAAAAAAAAAAAD7/wQAAAAAAAAAAAD8/wQAAAAAAAAAAAD9/wQAAAAAAAAAAAD+/wQAAAAAAAAAAAD//wQAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAAAPv/AAAAAAAAAAABAPv/AAAAAAAAAAACAPv/AAAAAAAAAAADAPv/AAAAAAAAAAAEAPv/AAAAAAAAAAAFAPv/AAAAAAAAAAAGAPv/AAAAAAAAAAAHAPv/AAAAAAAAAAAIAPv/AAAAAAAAAAD///v/AAAAAAAAAAD+//v/AAAAAAAAAAD9//v/AAAAAAAAAAD8//v/AAAAAAAAAAD7//v/AAAAAAAAAAD6//v/AAAAAAAAAAD5//v/AAAAAAAAAAD4//v/AAAAAAAAAAD3//v/AAAAAAAAAAD3/wEAAAAAAAAAAAD3/wMAAAAAAAAAAAD3/wIAAAAAAAAAAAD3/wAAAAAAAAAAAAD3////AAAAAAAAAAD3//7/AAAAAAAAAAD3//3/AAAAAAAAAAD3//z/AAAAAAAAAAAIAPz/AAAAAAAAAAAIAP3/AAAAAAAAAAAIAP7/AAAAAAAAAAAIAP//AAAAAAAAAAAIAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAA=")
+tile_set = ExtResource("1_w0q64")
+
+[node name="nivel" type="TileMapLayer" parent="." unique_id=670382498]
+tile_map_data = PackedByteArray("AAD4/wEAAAAAAAAAAAD4/wIAAAAAAAAAAAD5/wIAAAAAAAAAAAD6/wIAAAAAAAAAAAD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD7/wMAAAAAAAAAAAD6/wMAAAAAAAAAAAD5/wMAAAAAAAAAAAD4/wMAAAAAAAAAAAD5/wEAAAAAAAAAAAD6/wEAAAAAAAAAAAD7/wEAAAAAAAAAAAD8/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAD9/wIAAAAAAAAAAAD8/wIAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAP//AAAAAAAAAAAEAP7/AAAAAAAAAAAEAP3/AAAAAAAAAAAEAPz/AAAAAAAAAAAFAAEAAAACAAAAAAAGAAEAAAACAAAAAAAHAAEAAAACAAAAAAAHAP7/AAACAAAAAAAGAP7/AAACAAAAAAAFAP7/AAACAAAAAAABAAMAAAAAAAAAAAAAAAMAAAADAAEAAAD//wMAAAADAAEAAAD+/wMAAAADAAEAAAD7/wIAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAA=")
+tile_set = ExtResource("1_w0q64")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1352341099]
+zoom = Vector2(4.065, 4.065)
+
+[node name="personajePrincipal" parent="." unique_id=1595822948 instance=ExtResource("2_ute0u")]
+position = Vector2(-92, -3)
+
+[node name="princesa" parent="." unique_id=2128923955 instance=ExtResource("3_ldgge")]
+position = Vector2(119, -42)
+
+[node name="contenedorRecolectables" parent="." unique_id=1288952054 instance=ExtResource("4_m2c6r")]
+
+[node name="recolectable" parent="contenedorRecolectables" unique_id=105441413 instance=ExtResource("5_ppe7a")]
+position = Vector2(0, -18)
