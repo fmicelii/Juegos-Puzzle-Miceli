@@ -28,8 +28,10 @@ func _crearNivel(numeroNivel :int):
 		princesa.nivelPasado.connect(pasarNivel)
 
 func _eliminarNivel():
-	_nivelActualInstancia.queue_free() #queue_free es para eliminar nodo y todos los hijos 
+	_nivelActualInstancia.queue_free() 
+	#queue_free es para eliminar nodo y todos los hijos
 #( queue_free agrega este nodo a la cola de nodos que sera eliminados
+	await get_tree().process_frame  
 
 func _reiniciarNivel():
 	_eliminarNivel()
@@ -38,7 +40,7 @@ func _reiniciarNivel():
 func pasarNivel():
 	_nivelActual +=1
 	_eliminarNivel()
-	_crearNivel.call_deferred(_nivelActual) 
-	#no llamo a reiniciarNivel porque aunque hacen lo mismo,
-	# se da a entenderr que reinicio el nivel cuando no lo hago. Lo dejo asi para mejor entendimiento
-	
+	if _nivelActual < niveles.size():
+		_crearNivel(_nivelActual)
+	else:
+		get_tree().change_scene_to_file("res://escenas/escenaFinal/escena_final.tscn")
