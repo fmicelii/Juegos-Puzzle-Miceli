@@ -73,7 +73,7 @@ layout_mode = 2
 theme = ExtResource("6_wss7e")
 theme_override_fonts/font = ExtResource("7_wqgw4")
 text = "La princesa Lu tiene mucha hambre... 
-Por que no le alcanzas esas hamburguesas de ahí?
+Por qué no le alcanzas esas hamburguesas de ahí?
 "
 horizontal_alignment = 1
 

@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://bcrttrbefbqq"]
 
 [ext_resource type="Script" uid="uid://2jurf2bhhg5l" path="res://escenas/escenaPrincipal/escena_principal.gd" id="1_o80ot"]
-[ext_resource type="PackedScene" uid="uid://cixrlu8oncla4" path="res://escenas/nivelTutorial/nivel_tutorial.tscn" id="2_7rqtr"]
-[ext_resource type="PackedScene" uid="uid://e2rpah8flkqk" path="res://escenas/nivel1/nivel_1.tscn" id="2_gt6uk"]
+[ext_resource type="PackedScene" uid="uid://coy41l2p3320j" path="res://escenas/niveles/tutoriales/nivel_tutorial_1.tscn" id="2_igi0h"]
 [ext_resource type="PackedScene" uid="uid://bqmeyxj2g56cd" path="res://escenas/nivel0/nivel_0.tscn" id="3_4pr7v"]
 [ext_resource type="PackedScene" uid="uid://cnksgmvbawbkm" path="res://escenas/escenaFinal/escena_final.tscn" id="4_kse0y"]
 [ext_resource type="AudioStream" uid="uid://csyoql15iygaw" path="res://musica/musica.wav" id="5_8fy1g"]
@@ -11,7 +10,7 @@
 
 [node name="escenaPrincipal" type="Node2D" unique_id=1953355200]
 script = ExtResource("1_o80ot")
-niveles = Array[PackedScene]([ExtResource("2_7rqtr"), ExtResource("3_4pr7v"), ExtResource("2_gt6uk"), ExtResource("4_kse0y")])
+niveles = Array[PackedScene]([ExtResource("2_igi0h"), ExtResource("3_4pr7v"), ExtResource("4_kse0y")])
 
 [node name="musicaFondo" type="AudioStreamPlayer" parent="." unique_id=295334740]
 stream = ExtResource("5_8fy1g")
