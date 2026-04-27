@@ -4,3 +4,4 @@
 Label/colors/font_shadow_color = Color(0, 0, 0, 0.46666667)
 Label/constants/shadow_offset_x = 1
 Label/constants/shadow_offset_y = 1
+Label/font_sizes/font_size = 20

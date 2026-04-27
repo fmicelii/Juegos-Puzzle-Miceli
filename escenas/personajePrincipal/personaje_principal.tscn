@@ -5,10 +5,10 @@
 [ext_resource type="Material" uid="uid://cf46qdrpnkwd8" path="res://escenas/personajePrincipal/materialPersonajeRojo.tres" id="2_qerjr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lvt4w"]
-size = Vector2(14, 15)
+size = Vector2(12, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iwou3"]
-size = Vector2(14, 15)
+size = Vector2(12, 15)
 
 [node name="personajePrincipal" type="CharacterBody2D" unique_id=1595822948 node_paths=PackedStringArray("animacion", "area2d")]
 collision_layer = 4
@@ -23,7 +23,8 @@ shape = SubResource("RectangleShape2D_lvt4w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=958099926]
 sprite_frames = ExtResource("2_1gkdh")
-animation = &"salto"
+animation = &"idle"
+autoplay = "idle"
 flip_h = true
 
 [node name="Area2D_Danio" type="Area2D" parent="." unique_id=991343733]

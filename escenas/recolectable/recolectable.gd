@@ -8,9 +8,9 @@ func _ready() -> void:
 	_animar()
 
 func _recogida(_body):
-	contenedorRecolectables.recolectableAgarrado()
 	# Llamas al Autoload antes de destruir el nodo
 	SonidosGlobales.reproducirSonidoRecolectable()
+	contenedorRecolectables.recolectableAgarrado()
 	queue_free()
 
 func _animar():

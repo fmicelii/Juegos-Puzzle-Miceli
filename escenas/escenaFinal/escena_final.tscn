@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cnksgmvbawbkm"]
 
+[ext_resource type="FontFile" uid="uid://bu6vd78k8o6do" path="res://escenas/menuInicial/fuenteBotonAri.ttf" id="1_ts8bw"]
+
 [node name="escenaFinal" type="Node2D" unique_id=1789941779]
 
 [node name="Label" type="Label" parent="." unique_id=255125120]
@@ -14,5 +16,9 @@ offset_right = 57.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ts8bw")
 theme_override_font_sizes/font_size = 60
 text = "ganaste padre!"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1766100892]
+zoom = Vector2(1.28, 1.28)

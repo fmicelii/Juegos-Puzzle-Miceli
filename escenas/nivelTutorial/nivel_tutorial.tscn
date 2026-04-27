@@ -3,38 +3,129 @@
 [ext_resource type="TileSet" uid="uid://m345gvg0rj2u" path="res://tileSets/mazmorra.tres" id="1_l0qja"]
 [ext_resource type="PackedScene" uid="uid://bdblyb603303r" path="res://escenas/personajePrincipal/personaje_principal.tscn" id="3_li0xe"]
 [ext_resource type="PackedScene" uid="uid://cmp0f8bxc2awu" path="res://escenas/princesa/princesa.tscn" id="4_gtc5r"]
+[ext_resource type="Theme" uid="uid://dcd6ajsobniap" path="res://temas/tema_ingame.tres" id="6_l0qja"]
+[ext_resource type="FontFile" uid="uid://bu6vd78k8o6do" path="res://escenas/menuInicial/fuenteBotonAri.ttf" id="6_tai3k"]
 [ext_resource type="PackedScene" uid="uid://b80p78v4tmo6w" path="res://escenas/contenedorRecolectables/contenedor_recolectables.tscn" id="6_xu4mr"]
 [ext_resource type="PackedScene" uid="uid://bf2v0gu1yb1hv" path="res://escenas/recolectable/recolectable.tscn" id="7_wb1rk"]
+[ext_resource type="PackedScene" uid="uid://q8unmdvb1bxs" path="res://escenas/botonPuerta/puerta.tscn" id="8_0hw2x"]
+[ext_resource type="PackedScene" uid="uid://bo4g5tnpsi7gn" path="res://escenas/botonPuerta/boton.tscn" id="9_li0xe"]
+
+[sub_resource type="Theme" id="Theme_l0qja"]
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.46666667)
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/font_sizes/font_size = 20
 
 [node name="nivelTutorial" type="Node2D" unique_id=885155254]
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=482419175]
-zoom = Vector2(5.145, 5.145)
 
 [node name="fondo" type="TileMapLayer" parent="." unique_id=1237153964]
 tile_set = ExtResource("1_l0qja")
 
 [node name="nivel" type="TileMapLayer" parent="." unique_id=1930505807]
-tile_map_data = PackedByteArray("AAAJAAcAAAADAAIAAAAIAAcAAAADAAIAAAAKAAcAAAADAAIAAAALAAcAAAADAAIAAAAMAAcAAAADAAIAAAA=")
+tile_map_data = PackedByteArray("AAAJAAcAAAADAAIAAAAIAAcAAAADAAIAAAAKAAcAAAADAAIAAAALAAcAAAADAAIAAAAMAAcAAAADAAIAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////AAABAAAAAAAAAP//AAABAAAAAAAEAAAAAAADAAEAAAAFAAAAAAADAAEAAAADAAAAAAABAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAFAP7/AAABAAAAAAAEAP7/AAABAAAAAAD6////AAABAAAAAAD7////AAABAAAAAAD9/wEAAAABAAAAAAD+/wEAAAABAAAAAAD8////AAABAAAAAAA=")
 tile_set = ExtResource("1_l0qja")
 
 [node name="bordes" type="TileMapLayer" parent="." unique_id=1022671499]
 tile_map_data = PackedByteArray("AAAGAAIAAAAAAAAAAAD5/wIAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wAAAAAAAAAAAAD5////AAAAAAAAAAD5//7/AAAAAAAAAAD5//3/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAD5/wMAAAAAAAAAAAD6/wMAAAAAAAAAAAD7/wMAAAAAAAAAAAD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD+/wMAAAAAAAAAAAD//wMAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAPz/AAAAAAAAAAAFAPz/AAAAAAAAAAAEAPz/AAAAAAAAAAADAPz/AAAAAAAAAAACAPz/AAAAAAAAAAABAPz/AAAAAAAAAAAAAPz/AAAAAAAAAAD///z/AAAAAAAAAAD+//z/AAAAAAAAAAD9//z/AAAAAAAAAAD8//z/AAAAAAAAAAD7//z/AAAAAAAAAAD6//z/AAAAAAAAAAD5//z/AAAAAAAAAAA=")
 tile_set = ExtResource("1_l0qja")
 
-[node name="pj" parent="." unique_id=1595822948 instance=ExtResource("3_li0xe")]
-position = Vector2(-83, 37)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=482419175]
+zoom = Vector2(5.145, 5.145)
+
+[node name="Area2D" parent="." unique_id=934579866 node_paths=PackedStringArray("puerta_asignada") instance=ExtResource("9_li0xe")]
+position = Vector2(-84, 40)
+puerta_asignada = NodePath("../StaticBody2D")
+
+[node name="StaticBody2D" parent="." unique_id=1567901230 instance=ExtResource("8_0hw2x")]
+position = Vector2(-8, -16)
 
 [node name="princesa" parent="." unique_id=2128923955 instance=ExtResource("4_gtc5r")]
-position = Vector2(83, 37)
+position = Vector2(83, 40)
+
+[node name="pj" parent="." unique_id=1595822948 instance=ExtResource("3_li0xe")]
+position = Vector2(59, 36)
 
 [node name="contenedorRecolectables" parent="." unique_id=1288952054 instance=ExtResource("6_xu4mr")]
 
 [node name="recolectable" parent="contenedorRecolectables" unique_id=105441413 instance=ExtResource("7_wb1rk")]
-position = Vector2(-42, 33)
+position = Vector2(80, -36)
 
-[node name="recolectable2" parent="contenedorRecolectables" unique_id=794567285 instance=ExtResource("7_wb1rk")]
-position = Vector2(40, 33)
+[node name="mensajes" type="CanvasLayer" parent="." unique_id=2079294543]
+layer = 0
 
-[node name="recolectable3" parent="contenedorRecolectables" unique_id=1300037290 instance=ExtResource("7_wb1rk")]
-position = Vector2(0, 33)
+[node name="MarginContainer" type="MarginContainer" parent="mensajes" unique_id=146230980]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 90
+theme_override_constants/margin_top = 90
+theme_override_constants/margin_right = 90
+theme_override_constants/margin_bottom = 90
+
+[node name="Control" type="Control" parent="mensajes/MarginContainer" unique_id=1142305492]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="mensajes/MarginContainer/Control" unique_id=1649311852]
+layout_mode = 1
+offset_right = 380.0
+offset_bottom = 76.0
+
+[node name="Label" type="Label" parent="mensajes/MarginContainer/Control/VBoxContainer" unique_id=1307632947]
+layout_mode = 2
+theme = ExtResource("6_l0qja")
+theme_override_fonts/font = ExtResource("6_tai3k")
+text = "El principe debe moverse ! "
+
+[node name="Label2" type="Label" parent="mensajes/MarginContainer/Control/VBoxContainer" unique_id=760350945]
+layout_mode = 2
+theme = ExtResource("6_l0qja")
+theme_override_fonts/font = ExtResource("6_tai3k")
+text = "Hacelo con: ⭠ ⭡ ⭢ ⭣  o  W - A - S - D"
+
+[node name="mensajePrinc" type="VBoxContainer" parent="mensajes/MarginContainer/Control" unique_id=518952340]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -286.0
+offset_top = -146.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="mensajes/MarginContainer/Control/mensajePrinc" unique_id=847921603]
+layout_mode = 2
+theme = ExtResource("6_l0qja")
+theme_override_fonts/font = ExtResource("6_tai3k")
+text = "Qué estas esperando? "
+
+[node name="trameHambu" type="HBoxContainer" parent="mensajes/MarginContainer/Control/mensajePrinc" unique_id=1397735032]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="mensajes/MarginContainer/Control/mensajePrinc/trameHambu" unique_id=248759264]
+layout_mode = 2
+theme = ExtResource("6_l0qja")
+theme_override_fonts/font = ExtResource("6_tai3k")
+text = "Traeme mi"
+
+[node name="Label2" type="Label" parent="mensajes/MarginContainer/Control/mensajePrinc/trameHambu" unique_id=438268807]
+layout_mode = 2
+theme = SubResource("Theme_l0qja")
+theme_override_colors/font_color = Color(1, 0.7607843, 0, 1)
+theme_override_fonts/font = ExtResource("6_tai3k")
+text = "hamburguesa"
+
+[node name="Label4" type="Label" parent="mensajes/MarginContainer/Control/mensajePrinc/trameHambu" unique_id=626068553]
+layout_mode = 2
+theme = ExtResource("6_l0qja")
+theme_override_fonts/font = ExtResource("6_tai3k")
+text = "!"
+
+[node name="Label2" type="Label" parent="mensajes/MarginContainer/Control/mensajePrinc" unique_id=897459435]
+layout_mode = 2
+theme = ExtResource("6_l0qja")
+theme_override_fonts/font = ExtResource("6_tai3k")
+text = "Movete con: ⭠ ⭡ ⭢ ⭣  o  W - A - S - D"

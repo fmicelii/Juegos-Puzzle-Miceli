@@ -1,0 +1,30 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://ckfpi5lgibcvs"]
+
+[ext_resource type="Texture2D" uid="uid://cogbwolaoknd8" path="res://sprites/tileset_boton.png" id="1_nh6dw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q8um"]
+atlas = ExtResource("1_nh6dw")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hby24"]
+atlas = ExtResource("1_nh6dw")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5q8um")
+}],
+"loop": true,
+"name": &"apretado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hby24")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}]

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://q8unmdvb1bxs"]
+
+[ext_resource type="Texture2D" uid="uid://47o35pl1b7ou" path="res://sprites/tileset_mazmorra.png" id="1_g4m1e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4m1e"]
+atlas = ExtResource("1_g4m1e")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nahph"]
+size = Vector2(16, 16)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1567901230]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2090465189]
+modulate = Color(7.180835, 0, 0, 1)
+texture = SubResource("AtlasTexture_g4m1e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2109504235]
+visible = false
+shape = SubResource("RectangleShape2D_nahph")
+debug_color = Color(0, 0.6, 0.7, 0.42)
