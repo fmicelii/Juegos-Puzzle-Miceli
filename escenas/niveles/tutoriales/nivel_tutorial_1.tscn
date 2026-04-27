@@ -100,7 +100,7 @@ grow_vertical = 0
 layout_mode = 2
 theme = ExtResource("6_wss7e")
 theme_override_fonts/font = ExtResource("7_wqgw4")
-text = "Qué estas esperando? "
+text = "\"Qué estas esperando? "
 
 [node name="trameHambu" type="HBoxContainer" parent="mensajes/MarginContainer/Control/mensajePrinc" unique_id=1888812311]
 layout_mode = 2
@@ -123,4 +123,4 @@ text = "hamburguesas"
 layout_mode = 2
 theme = ExtResource("6_wss7e")
 theme_override_fonts/font = ExtResource("7_wqgw4")
-text = "!"
+text = "!\""

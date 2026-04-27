@@ -18,13 +18,14 @@ area2d = NodePath("Area2D_Danio")
 efectoRojoPersonaje = ExtResource("2_qerjr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2090576681]
+visible = false
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_lvt4w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=958099926]
 sprite_frames = ExtResource("2_1gkdh")
-animation = &"idle"
-autoplay = "idle"
+animation = &"salto"
+autoplay = "salto"
 flip_h = true
 
 [node name="Area2D_Danio" type="Area2D" parent="." unique_id=991343733]
@@ -32,6 +33,7 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Danio" unique_id=668387545]
+visible = false
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_iwou3")
 debug_color = Color(0, 0.6, 0.69803923, 0.07450981)

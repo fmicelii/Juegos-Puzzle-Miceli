@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cobsk04y1u0ku"]
 
 [ext_resource type="Script" uid="uid://cwbpgt1eja14k" path="res://escenas/menuPausa/pausa.gd" id="1_ety1p"]
-[ext_resource type="FontFile" uid="uid://c5m0py66pqvv6" path="res://escenas/menuInicial/fuenteTituloGrapeSoda.ttf" id="2_j75f7"]
+[ext_resource type="Theme" uid="uid://bi66cjusqeuyo" path="res://temas/tema_titulos.tres" id="2_00esa"]
 [ext_resource type="Theme" uid="uid://cv2p8j2iwimsr" path="res://temas/tema_boton_menu_principal.tres" id="3_4cn67"]
 [ext_resource type="StyleBox" uid="uid://bm2s3slsnckp6" path="res://temas/menuPrincipal/normal.tres" id="4_8cw6k"]
 [ext_resource type="StyleBox" uid="uid://btc48yl6abvj3" path="res://temas/menuPrincipal/pressed.tres" id="5_w6s75"]
@@ -9,10 +9,6 @@
 [ext_resource type="StyleBox" uid="uid://erck345vy2r6" path="res://temas/menuPrincipal/focus.tres" id="7_o3tli"]
 [ext_resource type="Script" uid="uid://rv5bcicw0jn7" path="res://escenas/menuPausa/boton_reanudar.gd" id="8_n3lwm"]
 [ext_resource type="Script" uid="uid://4wcawx0sxifp" path="res://escenas/menuInicial/boton_salir.gd" id="10_74npa"]
-
-[sub_resource type="Theme" id="Theme_e4kcc"]
-default_font = ExtResource("2_j75f7")
-default_font_size = 110
 
 [node name="pausa" type="CanvasLayer" unique_id=667431483]
 process_mode = 3
@@ -40,7 +36,7 @@ offset_right = 436.5
 offset_bottom = -97.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_e4kcc")
+theme = ExtResource("2_00esa")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 6
 text = "Menú Pausa"

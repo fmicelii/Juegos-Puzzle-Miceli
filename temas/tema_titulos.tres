@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://bi66cjusqeuyo"]
+
+[ext_resource type="FontFile" uid="uid://c5m0py66pqvv6" path="res://escenas/menuInicial/fuenteTituloGrapeSoda.ttf" id="1_m8yo1"]
+
+[resource]
+default_font = ExtResource("1_m8yo1")
+default_font_size = 110

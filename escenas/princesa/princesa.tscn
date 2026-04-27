@@ -45,9 +45,11 @@ frame_progress = 0.1699879
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1470549583]
+visible = false
 shape = SubResource("RectangleShape2D_y1m25")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=534578092]
+visible = false
 position = Vector2(-0.5, 7)
 shape = SubResource("RectangleShape2D_jg1fk")
 
@@ -56,6 +58,7 @@ collision_layer = 16
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1929453904]
+visible = false
 shape = SubResource("RectangleShape2D_eig6u")
 debug_color = Color(0, 0.62841845, 0.6668909, 0.34901962)
 

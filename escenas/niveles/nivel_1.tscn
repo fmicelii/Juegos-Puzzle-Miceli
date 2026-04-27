@@ -3,9 +3,21 @@
 [ext_resource type="TileSet" uid="uid://m345gvg0rj2u" path="res://tileSets/mazmorra.tres" id="1_lycuf"]
 [ext_resource type="PackedScene" uid="uid://b80p78v4tmo6w" path="res://escenas/contenedorRecolectables/contenedor_recolectables.tscn" id="2_gajck"]
 [ext_resource type="PackedScene" uid="uid://bf2v0gu1yb1hv" path="res://escenas/recolectable/recolectable.tscn" id="3_3yksj"]
+[ext_resource type="PackedScene" uid="uid://bdblyb603303r" path="res://escenas/personajePrincipal/personaje_principal.tscn" id="4_afhov"]
 [ext_resource type="PackedScene" uid="uid://q8unmdvb1bxs" path="res://escenas/botonPuerta/puerta.tscn" id="5_gxbmr"]
 [ext_resource type="PackedScene" uid="uid://bo4g5tnpsi7gn" path="res://escenas/botonPuerta/boton.tscn" id="6_v6le5"]
+[ext_resource type="PackedScene" uid="uid://cmp0f8bxc2awu" path="res://escenas/princesa/princesa.tscn" id="7_e7xe2"]
 [ext_resource type="PackedScene" uid="uid://c88pmt6mbe22k" path="res://escenas/trampa/trampa.tscn" id="8_ob3b3"]
+[ext_resource type="Theme" uid="uid://dcd6ajsobniap" path="res://temas/tema_ingame.tres" id="9_3yksj"]
+[ext_resource type="FontFile" uid="uid://bu6vd78k8o6do" path="res://escenas/menuInicial/fuenteBotonAri.ttf" id="10_afhov"]
+
+[sub_resource type="Theme" id="Theme_gxbmr"]
+Label/colors/font_color = Color(0.5918556, 0.69964534, 0.74651057, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.46666667)
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("10_afhov")
 
 [node name="nivel1" type="Node2D" unique_id=1355349825]
 
@@ -14,6 +26,7 @@ tile_map_data = PackedByteArray("AAD0/wYAAAAAAAAAAAD1/wYAAAAAAAAAAAD2/wYAAAAAAAA
 tile_set = ExtResource("1_lycuf")
 
 [node name="nivel" type="TileMapLayer" parent="." unique_id=467947513]
+tile_map_data = PackedByteArray("AAD9/wUAAAACAAEAAAD+/wUAAAADAAEAAAD//wUAAAADAAEAAAAAAAUAAAACAAEAAAD5/wUAAAAAAAAAAAD5/wQAAAAAAAAAAAD//wMAAAABAAAAAAD+/wMAAAABAAAAAAD1/wEAAAAAAAAAAAD2/wEAAAAAAAAAAAD4/wEAAAAAAAAAAAD5/wEAAAAAAAAAAAD6/wEAAAAAAAAAAAD7/wEAAAAAAAAAAAD8/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAD1/wAAAAABAAAAAAD2/wAAAAABAAAAAAD3/wAAAAABAAAAAAD4/wAAAAABAAAAAAD5/wAAAAABAAAAAAD6/wAAAAABAAAAAAD7/wAAAAABAAAAAAD8/wAAAAADAAEAAAD9/wAAAAABAAAAAAD+/wAAAAABAAAAAAD//wAAAAABAAAAAAAAAAAAAAABAAAAAAABAAAAAAADAAEAAAADAAAAAAABAAAAAAAEAAAAAAABAAAAAAAFAAAAAAABAAAAAAAGAAAAAAABAAAAAAD1//z/AAAAAAAAAAD2//z/AAAAAAAAAAD3//z/AAAAAAAAAAD4//z/AAAAAAAAAAD4//v/AAABAAAAAAD7//z/AAABAAAAAAD9//v/AAABAAAAAAABAPz/AAABAAAAAAD///3/AAABAAAAAAAKAP//AAAAAAAAAAAJAP//AAABAAAAAAAJAP3/AAACAAAAAAAIAP3/AAACAAAAAAAKAP3/AAACAAAAAAAKAPv/AAACAAAAAAAJAPv/AAACAAAAAAAIAPv/AAACAAAAAAAFAP3/AAABAAAAAAADAP3/AAABAAAAAAADAPz/AAACAAAAAAAAAPv/AAACAAAAAAD+//7/AAAAAAIAAAD///7/AAAAAAIAAAD7//3/AAAAAAIAAAADAP7/AAAAAAIAAAAFAP7/AAAAAAIAAAAEAPv/AAABAAAAAAD7//r/AAADAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAFAAQAAAAAAAAAAAADAAUAAAABAAEAAAAEAAUAAAAAAAAAAAAJAAMAAAABAAAAAAAKAAMAAAABAAAAAAAHAAEAAAABAAAAAAD1/wMAAAABAAAAAAD2/wMAAAABAAAAAAA=")
 tile_set = ExtResource("1_lycuf")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1611760017]
@@ -22,11 +35,96 @@ zoom = Vector2(3, 3)
 [node name="contenedorRecolectables" parent="." unique_id=1288952054 instance=ExtResource("2_gajck")]
 
 [node name="recolectable" parent="contenedorRecolectables" unique_id=105441413 instance=ExtResource("3_3yksj")]
-position = Vector2(41, 27)
+position = Vector2(-25, -45)
+
+[node name="recolectable2" parent="contenedorRecolectables" unique_id=437134426 instance=ExtResource("3_3yksj")]
+position = Vector2(161, 78)
+
+[node name="recolectable3" parent="contenedorRecolectables" unique_id=1905222182 instance=ExtResource("3_3yksj")]
+position = Vector2(167, -88)
+
+[node name="recolectable4" parent="contenedorRecolectables" unique_id=892116623 instance=ExtResource("3_3yksj")]
+position = Vector2(-16, 45)
+
+[node name="princesa" parent="." unique_id=2128923955 instance=ExtResource("7_e7xe2")]
+position = Vector2(-162, -77)
+
+[node name="personajePrincipal" parent="." unique_id=1595822948 instance=ExtResource("4_afhov")]
+position = Vector2(-155, -10)
 
 [node name="trampa" parent="." unique_id=1554190435 instance=ExtResource("8_ob3b3")]
-position = Vector2(4, 28)
+position = Vector2(-136, 24)
 
-[node name="boton" parent="." unique_id=934579866 instance=ExtResource("6_v6le5")]
+[node name="boton" parent="." unique_id=934579866 node_paths=PackedStringArray("puerta_asignada") instance=ExtResource("6_v6le5")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(-161, 88)
+puerta_asignada = NodePath("../puerta")
 
 [node name="puerta" parent="." unique_id=1567901230 instance=ExtResource("5_gxbmr")]
+modulate = Color(0.4807913, 0, 0, 1)
+position = Vector2(-120, -80)
+
+[node name="trampa2" parent="." unique_id=168884391 instance=ExtResource("8_ob3b3")]
+position = Vector2(40, 16)
+
+[node name="puerta2" parent="." unique_id=1799733258 instance=ExtResource("5_gxbmr")]
+modulate = Color(0, 0.45624295, 0, 1)
+position = Vector2(-71, 88)
+
+[node name="boton2" parent="." unique_id=223418629 node_paths=PackedStringArray("puerta_asignada") instance=ExtResource("6_v6le5")]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(-161, 48)
+puerta_asignada = NodePath("../puerta2")
+
+[node name="mensajes" type="CanvasLayer" parent="." unique_id=932176189]
+layer = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="mensajes" unique_id=1003109302]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 90
+theme_override_constants/margin_top = 90
+theme_override_constants/margin_right = 255
+theme_override_constants/margin_bottom = 90
+
+[node name="Control" type="Control" parent="mensajes/MarginContainer" unique_id=1405542379]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="mensajes/MarginContainer/Control" unique_id=1202936103]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -138.0
+offset_right = 152.0
+offset_bottom = -52.0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="mensajes/MarginContainer/Control/VBoxContainer" unique_id=1198754033]
+layout_mode = 2
+theme = ExtResource("9_3yksj")
+theme_override_fonts/font = ExtResource("10_afhov")
+text = "Se dice que hay "
+
+[node name="Label4" type="Label" parent="mensajes/MarginContainer/Control/VBoxContainer" unique_id=1239436019]
+layout_mode = 2
+theme = SubResource("Theme_gxbmr")
+theme_override_colors/font_color = Color(0, 0.25526252, 0.6834948, 1)
+theme_override_fonts/font = ExtResource("10_afhov")
+text = "bloques trampa "
+
+[node name="Label3" type="Label" parent="mensajes/MarginContainer/Control/VBoxContainer" unique_id=1609885843]
+layout_mode = 2
+theme = ExtResource("9_3yksj")
+theme_override_fonts/font = ExtResource("10_afhov")
+text = "por el castillo"
+
+[node name="Label5" type="Label" parent="mensajes/MarginContainer/Control/VBoxContainer" unique_id=566605199]
+layout_mode = 2
+theme = ExtResource("9_3yksj")
+theme_override_fonts/font = ExtResource("10_afhov")
+text = "Tené cuidadito..."
