@@ -9,17 +9,16 @@ func _ready() -> void:
 	_crearNivel(_nivelActual)
 
 func _input(event: InputEvent) -> void:
-	# Verificamos si tocaste una tecla (y evitamos que se repita si la mantenés apretada con 'not event.echo')
+	# evitamos que se repita si la dejas apretada con not event.echo
 	if event is InputEventKey and event.pressed and not event.echo:
-		
-		# Chequeamos que la tecla sea la 'N' y que estés manteniendo presionado 'Shift'
+		#deberiamos hacer un input map, pero esta es mas rapida, total es para q lo use yo para probar niveles
 		if event.keycode == KEY_N and Input.is_key_pressed(KEY_SHIFT):
-			print("CHEAT ACTIVADO: Saltando de nivel...")
+			print("salteando nivel...")
 			pasarNivel()
 
 func _crearNivel(numeroNivel :int):
 	_nivelActualInstancia = niveles[numeroNivel-1].instantiate()
-	add_child(_nivelActualInstancia) # Al añadirlo, se ejecutan los _ready de los hijos
+	add_child(_nivelActualInstancia) # se ejecutan los _ready de los hijos cuando c agrega
 	
 	#esto es para esperar 1 fotograma a que el niel viejo se borre
 	await get_tree().process_frame
@@ -39,7 +38,7 @@ func _crearNivel(numeroNivel :int):
 func _eliminarNivel():
 	_nivelActualInstancia.queue_free() 
 	#queue_free es para eliminar nodo y todos los hijos
-#( queue_free agrega este nodo a la cola de nodos que sera eliminados
+	#( queue_free agrega este nodo a la cola de nodos que sera eliminados
 	await get_tree().process_frame  
 
 func _reiniciarNivel():

@@ -1,0 +1,37 @@
+[gd_scene format=4 uid="uid://3a82a3mkg2oc"]
+
+[ext_resource type="TileSet" uid="uid://m345gvg0rj2u" path="res://tileSets/mazmorra.tres" id="1_3om5u"]
+[ext_resource type="PackedScene" uid="uid://cmp0f8bxc2awu" path="res://escenas/princesa/princesa.tscn" id="2_6d50y"]
+[ext_resource type="PackedScene" uid="uid://bdblyb603303r" path="res://escenas/personajePrincipal/personaje_principal.tscn" id="3_c365k"]
+[ext_resource type="PackedScene" uid="uid://bf2v0gu1yb1hv" path="res://escenas/recolectable/recolectable.tscn" id="4_esr34"]
+[ext_resource type="Texture2D" uid="uid://cw0lv5gvaypjx" path="res://corazon.png" id="5_364ki"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kos66"]
+texture = ExtResource("5_364ki")
+
+[node name="nivelTutorial1" type="Node2D" unique_id=202953730]
+
+[node name="bordes" type="TileMapLayer" parent="." unique_id=1344423413]
+tile_map_data = PackedByteArray("AAAFAPz/AAAAAAAAAAAEAPz/AAAAAAAAAAADAPz/AAAAAAAAAAACAPz/AAAAAAAAAAABAPz/AAAAAAAAAAAAAPz/AAAAAAAAAAD///z/AAAAAAAAAAD+//z/AAAAAAAAAAD9//z/AAAAAAAAAAD8//z/AAAAAAAAAAD7//z/AAAAAAAAAAD6//z/AAAAAAAAAAD5//z/AAAAAAAAAAAGAAIAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAP//AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAPz/AAAAAAAAAAD5/wMAAAAAAAAAAAD6/wMAAAAAAAAAAAD7/wMAAAAAAAAAAAD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD+/wMAAAAAAAAAAAD//wMAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAD5//3/AAAAAAAAAAD5//7/AAAAAAAAAAD5////AAAAAAAAAAD5/wAAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wIAAAAAAAAAAAA=")
+tile_set = ExtResource("1_3om5u")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1352341099]
+zoom = Vector2(5.145, 5.145)
+
+[node name="princesa" parent="." unique_id=2128923955 instance=ExtResource("2_6d50y")]
+process_mode = 4
+position = Vector2(85, 40)
+
+[node name="personajePrincipal" parent="." unique_id=1595822948 instance=ExtResource("3_c365k")]
+process_mode = 4
+position = Vector2(52, 40)
+
+[node name="recolectable" parent="." unique_id=105441413 instance=ExtResource("4_esr34")]
+position = Vector2(61, 20)
+
+[node name="Panel" type="Panel" parent="." unique_id=1792729053]
+offset_left = 70.0
+offset_top = 12.0
+offset_right = 83.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_kos66")

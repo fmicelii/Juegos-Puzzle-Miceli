@@ -17,7 +17,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if _muerto:
 		return
-	
+		
 	#gravedad 
 	velocity += get_gravity() *delta #get_gravity nos devuelve un vector2(x,y). getgravity le suma la gravedad en y a velocity 
 	

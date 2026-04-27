@@ -14,6 +14,7 @@ func _recogida(_body):
 	queue_free()
 
 func _animar():
+	#para hacer que suba y baje la burga
 	var tween: Tween = create_tween()
 	tween.set_loops(0)
 	tween.tween_property(self,"position:y", position.y - 2, 1)

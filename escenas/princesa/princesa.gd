@@ -1,10 +1,10 @@
 extends RigidBody2D
 
 @export var animacion: AnimatedSprite2D
-signal nivelPasado # Definimos la señal
+signal nivelPasado
 
 func _ready() -> void:
-	add_to_group("princesa") # Fundamental para encontrarla luego
+	add_to_group("princesa")
 
 func _process(_delta: float) -> void:
 	animacion.play("idle")

@@ -5,9 +5,7 @@ extends Area2D
 @export var animacion: AnimatedSprite2D
 
 func _ready() -> void:
-	# Conectamos la señal de cuando alguien lo pisa
 	body_entered.connect(_al_pisar)
-	
 
 func _al_pisar(body: Node) -> void:
 	if body.is_in_group("personaje"):
@@ -15,4 +13,3 @@ func _al_pisar(body: Node) -> void:
 		animacion.play("apretado")
 		if puerta_asignada:
 			puerta_asignada.queue_free()
-			

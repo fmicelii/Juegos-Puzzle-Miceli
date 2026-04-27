@@ -1,5 +1,6 @@
 extends Node
 #var nombre... : AudioStreamPlayer
+var reproductorSonidoPincesa: AudioStreamPlayer
 var reproductorSonidoRecolectable: AudioStreamPlayer
 var reproductorSonidoMuerte: AudioStreamPlayer 
 
@@ -20,6 +21,5 @@ func _ready() -> void:
 func reproducirSonidoRecolectable() -> void:
 	reproductorSonidoRecolectable.play()
 
-# 3. Creás la función para reproducirlo
 func reproducirSonidoMuerte() -> void:
 	reproductorSonidoMuerte.play()
