@@ -8,6 +8,15 @@ var _nivelActualInstancia: Node
 func _ready() -> void:
 	_crearNivel(_nivelActual)
 
+func _input(event: InputEvent) -> void:
+	# Verificamos si tocaste una tecla (y evitamos que se repita si la mantenés apretada con 'not event.echo')
+	if event is InputEventKey and event.pressed and not event.echo:
+		
+		# Chequeamos que la tecla sea la 'N' y que estés manteniendo presionado 'Shift'
+		if event.keycode == KEY_N and Input.is_key_pressed(KEY_SHIFT):
+			print("CHEAT ACTIVADO: Saltando de nivel...")
+			pasarNivel()
+
 func _crearNivel(numeroNivel :int):
 	_nivelActualInstancia = niveles[numeroNivel-1].instantiate()
 	add_child(_nivelActualInstancia) # Al añadirlo, se ejecutan los _ready de los hijos
@@ -41,6 +50,7 @@ func pasarNivel():
 	_nivelActual +=1
 	_eliminarNivel()
 	if _nivelActual < niveles.size():
-		_crearNivel(_nivelActual)
+		_crearNivel.call_deferred(_nivelActual)
 	else:
+		print("ganaste!")
 		get_tree().change_scene_to_file("res://escenas/escenaFinal/escena_final.tscn")

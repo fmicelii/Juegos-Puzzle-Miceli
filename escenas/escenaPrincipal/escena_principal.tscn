@@ -13,7 +13,7 @@
 
 [node name="escenaPrincipal" type="Node2D" unique_id=1953355200]
 script = ExtResource("1_o80ot")
-niveles = Array[PackedScene]([ExtResource("2_igi0h"), ExtResource("3_igi0h"), ExtResource("2_4pr7v"), ExtResource("2_066vx"), ExtResource("4_7rqtr"), ExtResource("7_d8csp")])
+niveles = Array[PackedScene]([ExtResource("2_igi0h"), ExtResource("3_igi0h"), ExtResource("2_4pr7v"), ExtResource("2_066vx"), ExtResource("4_7rqtr"), ExtResource("7_d8csp"), null])
 
 [node name="musicaFondo" type="AudioStreamPlayer" parent="." unique_id=295334740]
 stream = ExtResource("5_8fy1g")
