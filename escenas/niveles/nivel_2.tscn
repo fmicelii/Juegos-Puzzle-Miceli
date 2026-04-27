@@ -29,9 +29,11 @@ position = Vector2(8, -25)
 position = Vector2(-132, -71)
 
 [node name="StaticBody2D" parent="." unique_id=1567901230 instance=ExtResource("3_j8mmm")]
+modulate = Color(0.79699075, 0, 0.79699075, 1)
 position = Vector2(-8, -56)
 
 [node name="Area2D" parent="." unique_id=934579866 node_paths=PackedStringArray("puerta_asignada") instance=ExtResource("4_7fdhb")]
+modulate = Color(0.96318024, 0, 0.96318024, 1)
 position = Vector2(150, -56)
 puerta_asignada = NodePath("../StaticBody2D")
 

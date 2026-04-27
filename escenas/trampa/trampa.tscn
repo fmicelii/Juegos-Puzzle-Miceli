@@ -21,10 +21,11 @@ script = ExtResource("1_fvinj")
 raycast = NodePath("RayCast2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1470855586]
-modulate = Color(0.5854878, 0.5854878, 0.5854878, 1)
+modulate = Color(0.8278007, 0.8278007, 0.8278007, 1)
 texture = SubResource("AtlasTexture_fvinj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=764674525]
+visible = false
 shape = SubResource("RectangleShape2D_s0k0e")
 debug_color = Color(0, 0.6, 0.7, 0.42)
 
