@@ -5,6 +5,16 @@
 [ext_resource type="PackedScene" uid="uid://cmp0f8bxc2awu" path="res://escenas/princesa/princesa.tscn" id="3_ldgge"]
 [ext_resource type="PackedScene" uid="uid://b80p78v4tmo6w" path="res://escenas/contenedorRecolectables/contenedor_recolectables.tscn" id="4_m2c6r"]
 [ext_resource type="PackedScene" uid="uid://bf2v0gu1yb1hv" path="res://escenas/recolectable/recolectable.tscn" id="5_ppe7a"]
+[ext_resource type="Theme" uid="uid://dcd6ajsobniap" path="res://temas/tema_ingame.tres" id="6_ldgge"]
+[ext_resource type="FontFile" uid="uid://bu6vd78k8o6do" path="res://escenas/menuInicial/fuenteBotonAri.ttf" id="7_m2c6r"]
+
+[sub_resource type="Theme" id="Theme_ldgge"]
+Label/colors/font_color = Color(0.5918556, 0.69964534, 0.74651057, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.46666667)
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("7_m2c6r")
 
 [node name="nivelTutorial2" type="Node2D" unique_id=202953730]
 
@@ -13,19 +23,90 @@ tile_map_data = PackedByteArray("AAD3/wQAAAAAAAAAAAD4/wQAAAAAAAAAAAD5/wQAAAAAAAA
 tile_set = ExtResource("1_w0q64")
 
 [node name="nivel" type="TileMapLayer" parent="." unique_id=670382498]
-tile_map_data = PackedByteArray("AAD4/wEAAAAAAAAAAAD4/wIAAAAAAAAAAAD5/wIAAAAAAAAAAAD6/wIAAAAAAAAAAAD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD7/wMAAAAAAAAAAAD6/wMAAAAAAAAAAAD5/wMAAAAAAAAAAAD4/wMAAAAAAAAAAAD5/wEAAAAAAAAAAAD6/wEAAAAAAAAAAAD7/wEAAAAAAAAAAAD8/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAD9/wIAAAAAAAAAAAD8/wIAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAP//AAAAAAAAAAAEAP7/AAAAAAAAAAAEAP3/AAAAAAAAAAAEAPz/AAAAAAAAAAAFAAEAAAACAAAAAAAGAAEAAAACAAAAAAAHAAEAAAACAAAAAAAHAP7/AAACAAAAAAAGAP7/AAACAAAAAAAFAP7/AAACAAAAAAABAAMAAAAAAAAAAAAAAAMAAAADAAEAAAD//wMAAAADAAEAAAD+/wMAAAADAAEAAAD7/wIAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD4/wEAAAAAAAAAAAD4/wIAAAAAAAAAAAD5/wIAAAAAAAAAAAD6/wIAAAAAAAAAAAD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD7/wMAAAAAAAAAAAD6/wMAAAAAAAAAAAD5/wMAAAAAAAAAAAD4/wMAAAAAAAAAAAD5/wEAAAAAAAAAAAD6/wEAAAAAAAAAAAD7/wEAAAAAAAAAAAD8/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAD9/wIAAAAAAAAAAAD8/wIAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAP//AAAAAAAAAAAEAP7/AAAAAAAAAAAEAP3/AAABAAAAAAAHAP7/AAACAAAAAAAGAP7/AAACAAAAAAAFAP7/AAACAAAAAAABAAMAAAAAAAAAAAAAAAMAAAADAAEAAAD//wMAAAADAAEAAAD+/wMAAAADAAEAAAD7/wIAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAAFAAIAAAACAAAAAAAGAAIAAAACAAAAAAAHAAIAAAACAAAAAAAEAAIAAAAAAAAAAAAFAAAAAAACAAAAAAAGAAAAAAACAAAAAAAHAAAAAAACAAAAAAAEAPz/AAAAAAAAAAA=")
 tile_set = ExtResource("1_w0q64")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1352341099]
 zoom = Vector2(4.065, 4.065)
 
+[node name="princesa" parent="." unique_id=2128923955 instance=ExtResource("3_ldgge")]
+position = Vector2(89, -43)
+
 [node name="personajePrincipal" parent="." unique_id=1595822948 instance=ExtResource("2_ute0u")]
 position = Vector2(-92, -3)
-
-[node name="princesa" parent="." unique_id=2128923955 instance=ExtResource("3_ldgge")]
-position = Vector2(119, -42)
 
 [node name="contenedorRecolectables" parent="." unique_id=1288952054 instance=ExtResource("4_m2c6r")]
 
 [node name="recolectable" parent="contenedorRecolectables" unique_id=105441413 instance=ExtResource("5_ppe7a")]
-position = Vector2(0, -18)
+position = Vector2(-8, -24)
+
+[node name="mensajes" type="CanvasLayer" parent="." unique_id=1537932679]
+layer = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="mensajes" unique_id=665630986]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 90
+theme_override_constants/margin_top = 90
+theme_override_constants/margin_right = 255
+theme_override_constants/margin_bottom = 90
+
+[node name="Control" type="Control" parent="mensajes/MarginContainer" unique_id=863718232]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="mensajes/MarginContainer/Control" unique_id=31567748]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -600.0
+offset_bottom = 69.0
+grow_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="mensajes/MarginContainer/Control/HBoxContainer" unique_id=1999777147]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="mensajes/MarginContainer/Control/HBoxContainer/VBoxContainer" unique_id=1852747097]
+layout_direction = 3
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label2" type="Label" parent="mensajes/MarginContainer/Control/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1717763428]
+layout_mode = 2
+theme = ExtResource("6_ldgge")
+theme_override_fonts/font = ExtResource("7_m2c6r")
+text = "!"
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="mensajes/MarginContainer/Control/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1976817254]
+layout_mode = 2
+theme = SubResource("Theme_ldgge")
+theme_override_fonts/font = ExtResource("7_m2c6r")
+text = "pinchos"
+
+[node name="Label" type="Label" parent="mensajes/MarginContainer/Control/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=318220127]
+layout_mode = 2
+theme = ExtResource("6_ldgge")
+theme_override_fonts/font = ExtResource("7_m2c6r")
+text = "\"Jóven, tenga cuidado con esos "
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="mensajes/MarginContainer/Control/HBoxContainer/VBoxContainer" unique_id=282907360]
+layout_mode = 2
+theme = ExtResource("6_ldgge")
+theme_override_fonts/font = ExtResource("7_m2c6r")
+text = "Sáltelos y traigame mi hamburguesa porfavor!\""
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="mensajes/MarginContainer/Control/HBoxContainer" unique_id=1229949585]
+layout_mode = 2
+theme = ExtResource("6_ldgge")
+theme_override_fonts/font = ExtResource("7_m2c6r")
+text = "
+
+====>"
+horizontal_alignment = 2
