@@ -1,0 +1,74 @@
+[gd_scene format=4 uid="uid://ckvij48i3cbas"]
+
+[ext_resource type="TileSet" uid="uid://m345gvg0rj2u" path="res://tileSets/mazmorra.tres" id="1_lycuf"]
+[ext_resource type="PackedScene" uid="uid://b80p78v4tmo6w" path="res://escenas/contenedorRecolectables/contenedor_recolectables.tscn" id="2_gajck"]
+[ext_resource type="PackedScene" uid="uid://bf2v0gu1yb1hv" path="res://escenas/recolectable/recolectable.tscn" id="3_3yksj"]
+[ext_resource type="PackedScene" uid="uid://bdblyb603303r" path="res://escenas/personajePrincipal/personaje_principal.tscn" id="4_afhov"]
+[ext_resource type="PackedScene" uid="uid://q8unmdvb1bxs" path="res://escenas/botonPuerta/puerta.tscn" id="5_gxbmr"]
+[ext_resource type="PackedScene" uid="uid://bo4g5tnpsi7gn" path="res://escenas/botonPuerta/boton.tscn" id="6_v6le5"]
+[ext_resource type="PackedScene" uid="uid://cmp0f8bxc2awu" path="res://escenas/princesa/princesa.tscn" id="7_e7xe2"]
+[ext_resource type="PackedScene" uid="uid://c88pmt6mbe22k" path="res://escenas/trampa/trampa.tscn" id="8_ob3b3"]
+
+[node name="nivel3" type="Node2D" unique_id=1106009536]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1794415476]
+zoom = Vector2(2.9, 2.9)
+
+[node name="fondo" type="TileMapLayer" parent="." unique_id=897118528]
+tile_map_data = PackedByteArray("AAD//wAAAAACAAMAAAD//wEAAAACAAMAAAD8/wAAAAACAAMAAAD8/wEAAAACAAMAAAD8/wIAAAACAAMAAAD8/wMAAAACAAMAAAABAAAAAAACAAMAAAABAAEAAAACAAMAAAABAAIAAAACAAMAAAABAPr/AAABAAMAAAAJAP3/AAABAAMAAAAJAP//AAAAAAMAAAAKAP//AAAAAAMAAAAJAAAAAAAAAAMAAAD1/wMAAAAAAAMAAAD1/wQAAAAAAAMAAAD0/wQAAAAAAAMAAAD0/wUAAAAAAAMAAAD4/wAAAAAAAAMAAAD5/wAAAAAAAAMAAAD5/wEAAAAAAAMAAAD0//3/AAABAAMAAAD0//r/AAABAAMAAAD1//r/AAABAAMAAAD1//v/AAAAAAMAAAD0//v/AAABAAMAAAD6//v/AAACAAMAAAD6//r/AAACAAMAAAD9//3/AAACAAMAAAD9//z/AAACAAMAAAD9//v/AAACAAMAAAD9//r/AAACAAMAAAD8//z/AAACAAMAAAD8//v/AAACAAMAAAD8//r/AAACAAMAAAD4//3/AAACAAMAAAD4//z/AAACAAMAAAD4//v/AAACAAMAAAD4//r/AAACAAMAAAADAPv/AAACAAMAAAAEAPv/AAAAAAMAAAAEAPz/AAAAAAMAAAAFAPz/AAAAAAMAAAAFAP3/AAAAAAMAAAAAAP7/AAACAAMAAAAAAP3/AAACAAMAAAAAAPz/AAACAAMAAAAAAPv/AAACAAMAAAADAP3/AAACAAMAAAADAPz/AAACAAMAAAADAPr/AAACAAMAAAAKAP7/AAACAAMAAAAKAP3/AAACAAMAAAA=")
+tile_set = ExtResource("1_lycuf")
+
+[node name="bordes" type="TileMapLayer" parent="." unique_id=641525530]
+tile_map_data = PackedByteArray("AADz/wYAAAAAAAAAAAD0/wYAAAAAAAAAAAD1/wYAAAAAAAAAAAD2/wYAAAAAAAAAAAD3/wYAAAAAAAAAAAD4/wYAAAAAAAAAAAD5/wYAAAAAAAAAAAD6/wYAAAAAAAAAAAD7/wYAAAAAAAAAAAD8/wYAAAAAAAAAAAD9/wYAAAAAAAAAAAD+/wYAAAAAAAAAAAD//wYAAAAAAAAAAAAAAAYAAAAAAAAAAAABAAYAAAAAAAAAAAACAAYAAAAAAAAAAAADAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAAIAAYAAAAAAAAAAAAJAAYAAAAAAAAAAAAKAAYAAAAAAAAAAAALAAYAAAAAAAAAAAAMAAYAAAAAAAAAAAAMAAUAAAAAAAAAAAAMAAQAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAIAAAAAAAAAAAAMAAEAAAAAAAAAAAAMAAAAAAAAAAAAAAAMAP//AAAAAAAAAAAMAP7/AAAAAAAAAAAMAP3/AAAAAAAAAAAMAPz/AAAAAAAAAAAMAPv/AAAAAAAAAAAMAPr/AAAAAAAAAAAMAPn/AAAAAAAAAAALAPn/AAAAAAAAAAAKAPn/AAAAAAAAAAAJAPn/AAAAAAAAAAAIAPn/AAAAAAAAAAAHAPn/AAAAAAAAAAAGAPn/AAAAAAAAAAAFAPn/AAAAAAAAAAAEAPn/AAAAAAAAAAADAPn/AAAAAAAAAAACAPn/AAAAAAAAAAABAPn/AAAAAAAAAAAAAPn/AAAAAAAAAAD///n/AAAAAAAAAAD+//n/AAAAAAAAAAD9//n/AAAAAAAAAAD8//n/AAAAAAAAAAD7//n/AAAAAAAAAAD6//n/AAAAAAAAAAD5//n/AAAAAAAAAAD4//n/AAAAAAAAAAD3//n/AAAAAAAAAAD2//n/AAAAAAAAAAD1//n/AAAAAAAAAAD0//n/AAAAAAAAAADz//n/AAAAAAAAAADz//r/AAAAAAAAAADz//v/AAAAAAAAAADz//z/AAAAAAAAAADz//3/AAAAAAAAAADz//7/AAAAAAAAAADz////AAAAAAAAAADz/wAAAAAAAAAAAADz/wEAAAAAAAAAAADz/wIAAAAAAAAAAADz/wMAAAAAAAAAAADz/wQAAAAAAAAAAADz/wUAAAAAAAAAAAA=")
+tile_set = ExtResource("1_lycuf")
+
+[node name="nivel" type="TileMapLayer" parent="." unique_id=1344650601]
+tile_map_data = PackedByteArray("AAALAPz/AAAAAAAAAAAKAPz/AAAAAAAAAAAJAPz/AAAAAAAAAAD3/wMAAAAAAAAAAAD3/wQAAAAAAAAAAAD3/wUAAAAAAAAAAAD0/wEAAAAAAAAAAAD1/wEAAAAAAAAAAAD0////AAACAAAAAAD1////AAACAAAAAAD4/wMAAAABAAAAAAD5/wMAAAABAAAAAAD1/wIAAAAAAAIAAAD0/wIAAAAAAAIAAAD4//3/AAABAAAAAAD0//3/AAACAAAAAAD1//3/AAACAAAAAAD6//v/AAABAAAAAAD8//z/AAABAAAAAAD9//3/AAABAAAAAAD4////AAADAAEAAAD5////AAADAAEAAAD6////AAADAAEAAAD7////AAADAAEAAAD8////AAADAAEAAAD9////AAADAAEAAAD+////AAADAAEAAAD/////AAADAAEAAAAAAP//AAADAAEAAAABAP//AAADAAEAAAACAP//AAADAAEAAAADAP//AAADAAEAAAAEAP//AAADAAEAAAAFAP//AAADAAEAAAAAAP7/AAABAAAAAAD//wEAAAABAAAAAAABAAIAAAABAAAAAAACAAUAAAABAAAAAAAFAAQAAAABAAAAAAADAAIAAAABAAAAAAAFAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAD5/wQAAAAAAAAAAAD4/wQAAAAAAAAAAAD4/wUAAAAAAAAAAAD5/wUAAAAAAAAAAAAAAPz/AAADAAAAAAAAAPr/AAAAAAAAAAAAAPv/AAAAAAAAAAD6/wUAAAADAAEAAAD7/wUAAAADAAEAAAD8/wUAAAACAAEAAAD8/wMAAAABAAAAAAD9/wUAAAABAAAAAAD+/wUAAAABAAAAAAD//wUAAAABAAAAAAAAAAUAAAABAAAAAAABAAUAAAABAAAAAAALAAQAAAACAAAAAAAKAAQAAAACAAAAAAALAAAAAAABAAAAAAAKAP7/AAABAAAAAAAJAAIAAAAAAAAAAAAIAPz/AAAAAAAAAAAIAP3/AAAAAAAAAAAIAP7/AAAAAAAAAAAIAP//AAAAAAAAAAAIAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAAGAPz/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAABAPv/AAABAAAAAAADAP3/AAABAAAAAAA=")
+tile_set = ExtResource("1_lycuf")
+
+[node name="contenedorRecolectables" parent="." unique_id=1288952054 instance=ExtResource("2_gajck")]
+
+[node name="recolectable" parent="contenedorRecolectables" unique_id=105441413 instance=ExtResource("3_3yksj")]
+position = Vector2(-177, 80)
+
+[node name="recolectable2" parent="contenedorRecolectables" unique_id=778951711 instance=ExtResource("3_3yksj")]
+position = Vector2(-177, -77)
+
+[node name="recolectable3" parent="contenedorRecolectables" unique_id=1074636616 instance=ExtResource("3_3yksj")]
+position = Vector2(167, -35)
+
+[node name="princesa" parent="." unique_id=2128923955 instance=ExtResource("7_e7xe2")]
+position = Vector2(182, -74)
+
+[node name="personajePrincipal" parent="." unique_id=1595822948 instance=ExtResource("4_afhov")]
+position = Vector2(150, -72)
+
+[node name="sbRojo" parent="." unique_id=1567901230 instance=ExtResource("5_gxbmr")]
+modulate = Color(0.3933383, 0, 0, 1)
+position = Vector2(-152, -72)
+
+[node name="a2dRojo" parent="." unique_id=934579866 node_paths=PackedStringArray("puerta_asignada") instance=ExtResource("6_v6le5")]
+modulate = Color(1, 0.07450981, 0, 1)
+position = Vector2(8, -32)
+puerta_asignada = NodePath("../sbRojo")
+
+[node name="trampa" parent="." unique_id=1554190435 instance=ExtResource("8_ob3b3")]
+position = Vector2(-152, -88)
+
+[node name="sbCeleste" parent="." unique_id=302585192 instance=ExtResource("5_gxbmr")]
+modulate = Color(0, 0.5003271, 0.5003271, 1)
+position = Vector2(152, 24)
+
+[node name="a2dCeleste" parent="." unique_id=241973679 node_paths=PackedStringArray("puerta_asignada") instance=ExtResource("6_v6le5")]
+modulate = Color(0, 0.9628863, 0.9628863, 1)
+position = Vector2(24, -80)
+puerta_asignada = NodePath("../sbCeleste")
+
+[node name="a2dVerde" parent="." unique_id=457808282 node_paths=PackedStringArray("puerta_asignada") instance=ExtResource("6_v6le5")]
+modulate = Color(0, 0.9628863, 0.028788704, 1)
+position = Vector2(88, 24)
+puerta_asignada = NodePath("../sbVerde")
+
+[node name="sbVerde" parent="." unique_id=2070831210 instance=ExtResource("5_gxbmr")]
+modulate = Color(0, 0.36246958, 0, 1)
+position = Vector2(104, -72)

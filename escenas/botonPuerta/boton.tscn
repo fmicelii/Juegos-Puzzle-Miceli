@@ -32,10 +32,12 @@ animation = &"normal"
 autoplay = "normal"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1449307803]
+visible = false
 position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_sas3a")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1562895487]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2132951230]
 position = Vector2(0, 7.5)
