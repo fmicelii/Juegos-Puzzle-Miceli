@@ -57,7 +57,7 @@ position = Vector2(24, 10)
 position = Vector2(129, -61)
 
 [node name="recolectable3" parent="contenedorRecolectables" unique_id=2109506635 instance=ExtResource("3_naewe")]
-position = Vector2(-26, 74)
+position = Vector2(-26.000002, 72.00001)
 scale = Vector2(0.745, 0.745)
 
 [node name="mensajes" type="CanvasLayer" parent="." unique_id=1920802157]

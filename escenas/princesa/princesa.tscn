@@ -28,6 +28,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1m25"]
 size = Vector2(2, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jg1fk"]
+size = Vector2(5, 2)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eig6u"]
 size = Vector2(13, 8.5)
 
@@ -43,6 +46,10 @@ flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1470549583]
 shape = SubResource("RectangleShape2D_y1m25")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=534578092]
+position = Vector2(-0.5, 7)
+shape = SubResource("RectangleShape2D_jg1fk")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1645593676]
 collision_layer = 16
