@@ -1,0 +1,32 @@
+[gd_scene format=4 uid="uid://d0uhrraoxnuf5"]
+
+[ext_resource type="TileSet" uid="uid://m345gvg0rj2u" path="res://tileSets/mazmorra.tres" id="1_lycuf"]
+[ext_resource type="PackedScene" uid="uid://b80p78v4tmo6w" path="res://escenas/contenedorRecolectables/contenedor_recolectables.tscn" id="2_gajck"]
+[ext_resource type="PackedScene" uid="uid://bf2v0gu1yb1hv" path="res://escenas/recolectable/recolectable.tscn" id="3_3yksj"]
+[ext_resource type="PackedScene" uid="uid://q8unmdvb1bxs" path="res://escenas/botonPuerta/puerta.tscn" id="5_gxbmr"]
+[ext_resource type="PackedScene" uid="uid://bo4g5tnpsi7gn" path="res://escenas/botonPuerta/boton.tscn" id="6_v6le5"]
+[ext_resource type="PackedScene" uid="uid://c88pmt6mbe22k" path="res://escenas/trampa/trampa.tscn" id="8_ob3b3"]
+
+[node name="nivel1" type="Node2D" unique_id=1355349825]
+
+[node name="bordes" type="TileMapLayer" parent="." unique_id=202992976]
+tile_map_data = PackedByteArray("AAD0/wYAAAAAAAAAAAD1/wYAAAAAAAAAAAD2/wYAAAAAAAAAAAD3/wYAAAAAAAAAAAD4/wYAAAAAAAAAAAD5/wYAAAAAAAAAAAD6/wYAAAAAAAAAAAD7/wYAAAAAAAAAAAD8/wYAAAAAAAAAAAD9/wYAAAAAAAAAAAD+/wYAAAAAAAAAAAD//wYAAAAAAAAAAAAAAAYAAAAAAAAAAAABAAYAAAAAAAAAAAACAAYAAAAAAAAAAAADAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAAIAAYAAAAAAAAAAAAJAAYAAAAAAAAAAAAKAAYAAAAAAAAAAAALAAYAAAAAAAAAAAD0//n/AAAAAAAAAAD0//r/AAAAAAAAAAD0//v/AAAAAAAAAAD0//z/AAAAAAAAAAD0//3/AAAAAAAAAAD0//7/AAAAAAAAAAD0////AAAAAAAAAAD0/wAAAAAAAAAAAAD0/wEAAAAAAAAAAAD0/wIAAAAAAAAAAAD0/wMAAAAAAAAAAAD0/wQAAAAAAAAAAAD0/wUAAAAAAAAAAAALAAUAAAAAAAAAAAALAAQAAAAAAAAAAAALAAMAAAAAAAAAAAALAAIAAAAAAAAAAAALAAEAAAAAAAAAAAALAAAAAAAAAAAAAAALAP//AAAAAAAAAAALAP7/AAAAAAAAAAALAP3/AAAAAAAAAAALAPz/AAAAAAAAAAALAPv/AAAAAAAAAAALAPr/AAAAAAAAAAALAPn/AAAAAAAAAAAKAPn/AAAAAAAAAAAJAPn/AAAAAAAAAAAIAPn/AAAAAAAAAAAHAPn/AAAAAAAAAAAGAPn/AAAAAAAAAAAFAPn/AAAAAAAAAAAEAPn/AAAAAAAAAAADAPn/AAAAAAAAAAACAPn/AAAAAAAAAAABAPn/AAAAAAAAAAAAAPn/AAAAAAAAAAD///n/AAAAAAAAAAD+//n/AAAAAAAAAAD9//n/AAAAAAAAAAD8//n/AAAAAAAAAAD7//n/AAAAAAAAAAD6//n/AAAAAAAAAAD5//n/AAAAAAAAAAD4//n/AAAAAAAAAAD3//n/AAAAAAAAAAD2//n/AAAAAAAAAAD1//n/AAAAAAAAAAA=")
+tile_set = ExtResource("1_lycuf")
+
+[node name="nivel" type="TileMapLayer" parent="." unique_id=467947513]
+tile_set = ExtResource("1_lycuf")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1611760017]
+zoom = Vector2(3, 3)
+
+[node name="contenedorRecolectables" parent="." unique_id=1288952054 instance=ExtResource("2_gajck")]
+
+[node name="recolectable" parent="contenedorRecolectables" unique_id=105441413 instance=ExtResource("3_3yksj")]
+position = Vector2(41, 27)
+
+[node name="trampa" parent="." unique_id=1554190435 instance=ExtResource("8_ob3b3")]
+position = Vector2(4, 28)
+
+[node name="boton" parent="." unique_id=934579866 instance=ExtResource("6_v6le5")]
+
+[node name="puerta" parent="." unique_id=1567901230 instance=ExtResource("5_gxbmr")]

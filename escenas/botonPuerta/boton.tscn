@@ -21,7 +21,7 @@ size = Vector2(2, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ycmyx"]
 size = Vector2(2, 1)
 
-[node name="Area2D" type="Area2D" unique_id=934579866 node_paths=PackedStringArray("animacion")]
+[node name="boton" type="Area2D" unique_id=934579866 node_paths=PackedStringArray("animacion")]
 collision_mask = 4
 script = ExtResource("1_5q8um")
 animacion = NodePath("AnimatedSprite2D")
