@@ -10,10 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Juego-Puzzle"
+config/name="The Princess's Belly"
+config/description="\"The Princess's Belly\" es un juego puzzle de plataformas en donde te pones en la piel de un joven samaritano que busca satisfacer el hambre voraz de la Princesa Lu.
+Este proyecto fue hecho por Francisco Miceli. "
 run/main_scene="uid://dk7nv8cjalwf1"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://b3a27mdydcuul"
 
 [audio]
 
@@ -30,6 +32,7 @@ shapes/collision/shape_color=Color(0, 0.6392157, 0.34901962, 0.34901962)
 
 [display]
 
+window/size/mode=3
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
@@ -84,4 +87,5 @@ textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+anti_aliasing/quality/msaa_2d=3
 environment/defaults/default_clear_color=Color(0, 0, 0.16862746, 1)

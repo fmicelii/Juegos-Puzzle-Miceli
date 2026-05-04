@@ -30,6 +30,7 @@ func _physics_process(delta: float) -> void:
 	
 	#saltar
 	if is_on_floor() && Input.is_action_just_pressed("movimientoSaltar"):
+		SonidosGlobales.reproducirSonidoSalto()
 		velocity.y = _velocidadSalto
 	
 	#movimiento lateral flechitas

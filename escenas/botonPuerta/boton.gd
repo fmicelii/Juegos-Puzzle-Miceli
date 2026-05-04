@@ -11,5 +11,6 @@ func _al_pisar(body: Node) -> void:
 	if body.is_in_group("personaje"):
 		print("¡Botón pisado!")
 		animacion.play("apretado")
+		SonidosGlobales.reproducirSonidoPuerta()
 		if puerta_asignada:
 			puerta_asignada.queue_free()
