@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://3a82a3mkg2oc"]
+[gd_scene format=4 uid="uid://bjp8jsye3pb6i"]
 
 [ext_resource type="TileSet" uid="uid://m345gvg0rj2u" path="res://tileSets/mazmorra.tres" id="1_3om5u"]
 [ext_resource type="PackedScene" uid="uid://cmp0f8bxc2awu" path="res://escenas/princesa/princesa.tscn" id="2_6d50y"]
@@ -27,6 +27,7 @@ process_mode = 4
 position = Vector2(52, 40)
 
 [node name="recolectable" parent="." unique_id=105441413 instance=ExtResource("4_esr34")]
+process_mode = 4
 position = Vector2(61, 20)
 
 [node name="Panel" type="Panel" parent="." unique_id=1792729053]
