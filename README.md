@@ -26,6 +26,10 @@ Encarna a un joven samaritano que debe recolectar comida y superar diversos desa
 - Llega a la princesa para completar el nivel
 - ¡Supera todos los niveles para ganar!
 
+## 🌐 Jugar Online
+
+¡Puedes jugar online en: [The Princess's Belly en itch.io](https://fmiceli.itch.io/the-princesss-belly)
+
 ## 🛠️ Desarrollo
 
 **Creador:** [Francisco Miceli](https://github.com/fmicelii)
